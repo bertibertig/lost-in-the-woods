@@ -27,7 +27,5 @@ public class PlayerMovement : MonoBehaviour
         movement = new Vector3(movement.x, 0, movement.z);
 
         cc.Move(movement);
-
-        print(movement);
     }
 }
