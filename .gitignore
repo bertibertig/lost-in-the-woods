@@ -9,7 +9,7 @@ Unity-Project/Lost In The Woods/[Bb]uild/
 Unity-Project/Lost In The Woods/[Bb]uilds/
 Unity-Project/Lost In The Woods/[Ll]ogs/
 Unity-Project/Lost In The Woods/[Mm]emoryCaptures/
-Unity-Project/Lost In The Woods/[Uu]serSettings
+Unity-Project/Lost In The Woods/[Uu]serSettings/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
