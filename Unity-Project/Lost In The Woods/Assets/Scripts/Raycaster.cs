@@ -29,7 +29,7 @@ public class Raycaster : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Vector3 midPoint = new Vector3(camera.pixelWidth / 2, camera.pixelHeight / 2);
         Ray ray = camera.ScreenPointToRay(midPoint);
@@ -44,10 +44,11 @@ public class Raycaster : MonoBehaviour
                 lookingAtGhost = true;
                 if (!loadChargeStarted)
                 {
+                    loadChargeStarted = true;
                     StartCoroutine(LoadCharge());
                 }
             }
-            if(hitTarget.CompareTag("LevelExit"))
+            else if(hitTarget.CompareTag("LevelExit"))
             {
                 levelExit = hitTarget.GetComponent<LevelExit>();
                 if(levelExit != null)
@@ -72,11 +73,12 @@ public class Raycaster : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
-
                 if (hitTarget.CompareTag("GhostEnemy"))
                 {
                     GhostHealthController healthController = hitTarget.GetComponent<GhostHealthController>();
                     healthController.DamageGhost(charge);
+                    lookingAtGhost = false;
+                    StopCoroutine(LoadCharge());
                     charge = 0;
                 }
                 if (hitTarget.CompareTag("LevelExit") && levelExit != null)
@@ -89,7 +91,6 @@ public class Raycaster : MonoBehaviour
 
     private IEnumerator LoadCharge()
     {
-        loadChargeStarted = true;
         while (lookingAtGhost && charge <= 100)
         {
             yield return new WaitForSeconds(speed);
