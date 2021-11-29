@@ -29,8 +29,6 @@ public class Float : MonoBehaviour
                 float newY = transform.position.y + velocity;
                 velocity *= equilizeFactor;
                 transform.position = new Vector3(xValue, newY, zValue);
-                print("Ghost at y: " + transform.position.y);
-                print("i: " + i + "velocity: " + velocity);
                 yield return new WaitForSeconds(0.1f);
             }
             velocity = originalVelocity;
@@ -40,8 +38,6 @@ public class Float : MonoBehaviour
                 float newY = transform.position.y + velocity;
                 velocity *= equilizeFactor;
                 transform.position = new Vector3(xValue, newY, zValue);
-                print("Ghost at y: " + transform.position.y);
-                print("i: " + i + "velocity: " + velocity);
                 yield return new WaitForSeconds(0.1f);
             }
             velocity = originalVelocity;

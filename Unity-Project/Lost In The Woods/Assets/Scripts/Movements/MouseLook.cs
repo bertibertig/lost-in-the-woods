@@ -19,12 +19,6 @@ public class MouseLook : MonoBehaviour
 
     private float rotX = 0.0f;
 
-    void Start()
-    {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Confined;
-    }
-
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -41,7 +35,7 @@ public class MouseLook : MonoBehaviour
             float rotY = transform.localEulerAngles.y;
             transform.localEulerAngles = new Vector3(rotX, rotY, 0);
         }
-        else
+        else if (Cursor.lockState == CursorLockMode.Confined)
         {
             rotX -= Input.GetAxis("Mouse Y") * sensitivityVer;
             rotX = Mathf.Clamp(rotX, minVert, maxVert);
@@ -49,5 +43,11 @@ public class MouseLook : MonoBehaviour
             float rotY = transform.localEulerAngles.y + delta;
             transform.localEulerAngles = new Vector3(rotX, rotY, 0);
         }
+    }
+
+    private void OnApplicationFocus(bool focus)
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 }

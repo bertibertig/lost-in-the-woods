@@ -5,12 +5,12 @@ using TMPro;
 
 public class Raycaster : MonoBehaviour
 {
-    [Range(0.1f,1)]
+    [Range(0.1f, 1)]
     public float speed = 1;
     public TextMeshProUGUI chargeUIText;
 
     private Camera camera;
-    [SerializeField,ReadOnly]
+    [SerializeField, ReadOnly]
     private int charge;
     [SerializeField]
     private bool lookingAtGhost;
@@ -39,7 +39,7 @@ public class Raycaster : MonoBehaviour
             if (hitTarget.CompareTag("GhostEnemy"))
             {
                 lookingAtGhost = true;
-                if(!loadChargeStarted)
+                if (!loadChargeStarted)
                 {
                     StartCoroutine(LoadCharge());
                 }
@@ -53,41 +53,17 @@ public class Raycaster : MonoBehaviour
                 chargeUIText.text = charge.ToString();
             }
 
-                if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0))
             {
-                Debug.Log("Hit: " + hit.point);
-                StartCoroutine(HitIndicator(hit.point));
 
                 if (hitTarget.tag == "GhostEnemy")
                 {
-                    Destroy(hit.transform.gameObject);
+                    GhostHealthController healthController = hitTarget.GetComponent<GhostHealthController>();
+                    healthController.DamageGhost(charge);
                 }
+                charge = 0;
             }
         }
-    }
-
-    private IEnumerator HitIndicator(Vector3 hitLocation)
-    {
-        GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-        sphere.transform.position = hitLocation;
-        yield return new WaitForSeconds(1.0f);
-        StartCoroutine(MoveShphere(sphere, 5));
-
-    }
-
-    private IEnumerator MoveShphere(GameObject sphere, int secs)
-    {
-        int counter = 0;
-
-        while (counter <= secs)
-        {
-            sphere.transform.position = sphere.transform.position + new Vector3(1, 0, 0);
-
-            counter++;
-            yield return new WaitForSeconds(1.0f);
-        }
-
-        Destroy(sphere);
     }
 
     private IEnumerator LoadCharge()
@@ -97,7 +73,7 @@ public class Raycaster : MonoBehaviour
         {
             yield return new WaitForSeconds(speed);
             charge++;
-            if(chargeUIText != null)
+            if (chargeUIText != null)
             {
                 chargeUIText.text = charge.ToString();
             }
