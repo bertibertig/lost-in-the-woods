@@ -15,7 +15,7 @@ public class FootprintSound : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetAxis("Horizontal") != 0 /* || cc.isGrounded() */)
+        if((Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0) && !soundSource.isPlaying)
         {
             soundSource.clip = footprintSound[Random.Range(0, footprintSound.Length)];
             soundSource.Play(0);

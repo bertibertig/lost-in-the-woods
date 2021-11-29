@@ -8,6 +8,7 @@ public class Raycaster : MonoBehaviour
     [Range(0.1f, 1)]
     public float speed = 1;
     public TextMeshProUGUI chargeUIText;
+    public int cooldown = 3;
 
     private Camera camera;
     [SerializeField, ReadOnly]
@@ -15,6 +16,8 @@ public class Raycaster : MonoBehaviour
     [SerializeField]
     private bool lookingAtGhost;
     private bool loadChargeStarted;
+
+    private LevelExit levelExit = null;
 
     // Start is called before the first frame update
     void Start()
@@ -44,24 +47,42 @@ public class Raycaster : MonoBehaviour
                     StartCoroutine(LoadCharge());
                 }
             }
+            if(hitTarget.CompareTag("LevelExit"))
+            {
+                levelExit = hitTarget.GetComponent<LevelExit>();
+                if(levelExit != null)
+                {
+                    levelExit.LookingAtObject();
+                }
+            }
             else
             {
                 lookingAtGhost = false;
                 loadChargeStarted = false;
                 StopCoroutine(LoadCharge());
                 charge = 0;
-                chargeUIText.text = charge.ToString();
+                if(chargeUIText != null)
+                    chargeUIText.text = charge.ToString();
+                
+                if(levelExit != null)
+                {
+                    levelExit.LookingAway();
+                }
             }
 
             if (Input.GetMouseButtonDown(0))
             {
 
-                if (hitTarget.tag == "GhostEnemy")
+                if (hitTarget.CompareTag("GhostEnemy"))
                 {
                     GhostHealthController healthController = hitTarget.GetComponent<GhostHealthController>();
                     healthController.DamageGhost(charge);
+                    charge = 0;
                 }
-                charge = 0;
+                if (hitTarget.CompareTag("LevelExit") && levelExit != null)
+                {
+                    levelExit.LookingAway();
+                }
             }
         }
     }

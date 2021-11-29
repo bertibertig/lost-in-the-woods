@@ -17,6 +17,7 @@ public class GhostHealthController : MonoBehaviour
     public void DamageGhost(int damageAmount)
     {
         hp -= damageAmount;
+        print("Damage: " + damageAmount + "\nEnemyHP: " + hp);
         if(hp <= 0)
         {
             Destroy(gameObject);
