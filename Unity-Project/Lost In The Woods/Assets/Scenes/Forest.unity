@@ -37,8 +37,8 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.11653019, g: 0.17962825, b: 0.18267459, a: 1}
+  m_Sun: {fileID: 1619143972}
+  m_IndirectSpecularColor: {r: 0.17536744, g: 0.26984045, b: 0.2743788, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -130,13 +130,93 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 37573768, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 37573768, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: sensitivityHor
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1673949994, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
       propertyPath: chargeUIText
       value: 
       objectReference: {fileID: 1324884041}
+    - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: footstepDuration
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: footprintSound.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: footprintSound.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 763b8e3146b8ee44e9c096160942d711, type: 3}
+    - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: footprintSound.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 154e0f87d874c434eaff3cd773e5ddb0, type: 3}
+    - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: footprintSound.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 82ec0fe5c7998964680754bedda5c628, type: 3}
+    - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: footprintSound.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6c1157ff88651104e83c3dc5bf8d8564, type: 3}
+    - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: footprintSound.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2ed262b038adee64eb9732154c63f113, type: 3}
+    - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: footprintSound.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 72b2e161784b9c6448ea11c048998284, type: 3}
+    - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: footprintSound.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: e614552c7c8493742bf76b514efcecc6, type: 3}
+    - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: footprintSound.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: e614552c7c8493742bf76b514efcecc6, type: 3}
+    - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: footprintSound.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: e614552c7c8493742bf76b514efcecc6, type: 3}
+    - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: footprintSound.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: e614552c7c8493742bf76b514efcecc6, type: 3}
+    - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: footprintSound.Array.data[10]
+      value: 
+      objectReference: {fileID: 8300000, guid: e614552c7c8493742bf76b514efcecc6, type: 3}
+    - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: footprintSound.Array.data[11]
+      value: 
+      objectReference: {fileID: 8300000, guid: e614552c7c8493742bf76b514efcecc6, type: 3}
+    - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: footprintSound.Array.data[12]
+      value: 
+      objectReference: {fileID: 8300000, guid: e614552c7c8493742bf76b514efcecc6, type: 3}
+    - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: footprintSound.Array.data[13]
+      value: 
+      objectReference: {fileID: 8300000, guid: e614552c7c8493742bf76b514efcecc6, type: 3}
     - target: {fileID: 3058346755455478663, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3058346755455478714, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: normalSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3058346755455478714, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: runningSpeed
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3058346755455478715, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
       propertyPath: m_RootOrder
