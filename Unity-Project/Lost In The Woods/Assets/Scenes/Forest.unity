@@ -14,10 +14,10 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.02
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 8426cf3d3939a7d419671f3d5c269c0b, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -37,8 +37,8 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_Sun: {fileID: 1619143972}
+  m_IndirectSpecularColor: {r: 0.17536744, g: 0.26984045, b: 0.2743788, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -130,13 +130,93 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 37573768, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 37573768, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: sensitivityHor
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1673949994, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
       propertyPath: chargeUIText
       value: 
       objectReference: {fileID: 1324884041}
+    - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: footstepDuration
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: footprintSound.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: footprintSound.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 763b8e3146b8ee44e9c096160942d711, type: 3}
+    - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: footprintSound.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 154e0f87d874c434eaff3cd773e5ddb0, type: 3}
+    - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: footprintSound.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 82ec0fe5c7998964680754bedda5c628, type: 3}
+    - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: footprintSound.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6c1157ff88651104e83c3dc5bf8d8564, type: 3}
+    - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: footprintSound.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2ed262b038adee64eb9732154c63f113, type: 3}
+    - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: footprintSound.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 72b2e161784b9c6448ea11c048998284, type: 3}
+    - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: footprintSound.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: e614552c7c8493742bf76b514efcecc6, type: 3}
+    - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: footprintSound.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: e614552c7c8493742bf76b514efcecc6, type: 3}
+    - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: footprintSound.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: e614552c7c8493742bf76b514efcecc6, type: 3}
+    - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: footprintSound.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: e614552c7c8493742bf76b514efcecc6, type: 3}
+    - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: footprintSound.Array.data[10]
+      value: 
+      objectReference: {fileID: 8300000, guid: e614552c7c8493742bf76b514efcecc6, type: 3}
+    - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: footprintSound.Array.data[11]
+      value: 
+      objectReference: {fileID: 8300000, guid: e614552c7c8493742bf76b514efcecc6, type: 3}
+    - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: footprintSound.Array.data[12]
+      value: 
+      objectReference: {fileID: 8300000, guid: e614552c7c8493742bf76b514efcecc6, type: 3}
+    - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: footprintSound.Array.data[13]
+      value: 
+      objectReference: {fileID: 8300000, guid: e614552c7c8493742bf76b514efcecc6, type: 3}
     - target: {fileID: 3058346755455478663, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3058346755455478714, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: normalSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3058346755455478714, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: runningSpeed
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3058346755455478715, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
       propertyPath: m_RootOrder
@@ -387,14 +467,14 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 0.3
+  m_Intensity: 0.5
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
-    m_Resolution: -1
+    m_Resolution: 0
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.05
