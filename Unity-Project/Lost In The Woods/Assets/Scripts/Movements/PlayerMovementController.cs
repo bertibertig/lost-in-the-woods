@@ -9,8 +9,8 @@ public class PlayerMovementController : MonoBehaviour
     public float normalSpeed = 5.0f;
     public float runningSpeed = 10.0f;
 
-    private float currGravity = 0;
-    private float currSpeed = 0;
+    private float currGravity = 0f;
+    private float currSpeed = 0f;
 
     private CharacterController cc;
     // Start is called before the first frame update
