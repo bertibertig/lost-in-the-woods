@@ -10,14 +10,30 @@ public class MouseLook : MonoBehaviour
     }
 
     public RotateAxis axis = RotateAxis.MouseXY;
-    public float sensitivityHor = 17.0f;
-    public float sensitivityVer = 17.0f;
     [Range(-180.0f, 180.0f)]
     public float minVert = -60.0f;
     [Range(-180.0f, 180.0f)]
     public float maxVert = 70.0f;
 
     private float rotX = 0.0f;
+
+    [SerializeField]
+    private float sensitivityHor = 17.0f;
+
+    public float SensitivityHor
+    {
+        get { return sensitivityHor; }
+        set { sensitivityHor = value; }
+    }
+
+    private float sensitivityVer = 17.0f;
+
+    public float SensitivityVer
+    {
+        get { return sensitivityVer; }
+        set { sensitivityVer = value; }
+    }
+
 
     // Update is called once per frame
     void FixedUpdate()
