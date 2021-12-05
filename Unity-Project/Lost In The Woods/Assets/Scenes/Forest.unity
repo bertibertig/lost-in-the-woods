@@ -214,6 +214,22 @@ PrefabInstance:
       propertyPath: footprintSound.Array.data[13]
       value: 
       objectReference: {fileID: 8300000, guid: e614552c7c8493742bf76b514efcecc6, type: 3}
+    - target: {fileID: 1030815797239383151, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: customRes.x
+      value: 367
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030815797239383151, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: customRes.y
+      value: 173
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030815797239383151, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: camInaccuracy
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030815797239383151, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: resolutionFactor
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3058346755455478663, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
       propertyPath: m_Name
       value: Player

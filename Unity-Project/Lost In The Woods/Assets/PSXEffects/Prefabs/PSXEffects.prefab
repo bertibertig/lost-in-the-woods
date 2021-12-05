@@ -29,6 +29,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -99,7 +100,7 @@ MonoBehaviour:
   cfuStatus: PSXEffects
   sections: 01010100
   customRes: {x: 620, y: 480}
-  resolutionFactor: 2
+  resolutionFactor: 3
   limitFramerate: 60
   skipFrames: 0
   affineMapping: 1
@@ -122,7 +123,7 @@ MonoBehaviour:
   shadowIntensity: 0.5
   downscale: 0
   snapCamera: 1
-  camInaccuracy: 0.05
+  camInaccuracy: 0.01
   camSnapping: 0
   shadowType: 0
   ditherSky: 0
