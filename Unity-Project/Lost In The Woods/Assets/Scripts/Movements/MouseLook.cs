@@ -26,6 +26,7 @@ public class MouseLook : MonoBehaviour
         set { sensitivityHor = value; }
     }
 
+    [SerializeField]
     private float sensitivityVer = 17.0f;
 
     public float SensitivityVer

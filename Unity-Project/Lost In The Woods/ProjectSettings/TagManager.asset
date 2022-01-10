@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GhostEnemy
   - LevelExit
+  - GUI
   layers:
   - Default
   - TransparentFX

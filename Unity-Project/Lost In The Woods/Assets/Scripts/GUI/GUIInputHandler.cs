@@ -9,9 +9,11 @@ public class GUIInputHandler : MonoBehaviour
 
     private bool optionsOpened = false;
 
+    public bool OnMainMenu { get; set; }
+
     void Start()
     {
-        if(optionsMenu != null)
+        if (optionsMenu != null)
         {
             optionsMenu.SetActive(false);
         }
@@ -20,7 +22,7 @@ public class GUIInputHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Cancel") && optionsMenu != null)
+        if(Input.GetButtonDown("Cancel") && optionsMenu != null && !OnMainMenu)
         {
             if(!optionsOpened)
             {
