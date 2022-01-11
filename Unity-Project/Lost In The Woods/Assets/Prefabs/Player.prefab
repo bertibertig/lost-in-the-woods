@@ -939,7 +939,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: aac0fc3b99414f443bfba6d3d8942b7b, type: 3}
   - {fileID: 8300000, guid: e614552c7c8493742bf76b514efcecc6, type: 3}
   footstepDurationWalk: 0.75
-  footstepDurationRun: 0.3
+  footstepDurationRun: 0.5
 --- !u!136 &3058346755462520740
 CapsuleCollider:
   m_ObjectHideFlags: 0

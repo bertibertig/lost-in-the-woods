@@ -41,7 +41,7 @@ public class PlayerMovementController : MonoBehaviour
             }
             else if (currStamina < maxStamina)
             {
-                if (staminaRegenTime >= 3f)
+                if (staminaRegenTime >= 1.5f)
                 {
                     currStamina = Mathf.Clamp(currStamina + (Time.deltaTime), 0.0f, maxStamina);
                 }
