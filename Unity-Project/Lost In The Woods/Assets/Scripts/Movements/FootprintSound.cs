@@ -21,13 +21,13 @@ public class FootprintSound : MonoBehaviour
             if ((Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0) && !GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovementController>().DisableMovement)
             {
                 soundSource.PlayOneShot(footprintSound[Random.Range(0, footprintSound.Length)]);
-                if (Input.GetButton("Run"))
+                if (GetComponent<PlayerMovementController>().isNormalSpeed())
                 {
-                    yield return new WaitForSeconds(footstepDurationRun);
+                    yield return new WaitForSeconds(footstepDurationWalk);
                 }
                 else
                 {
-                    yield return new WaitForSeconds(footstepDurationWalk);
+                    yield return new WaitForSeconds(footstepDurationRun);
                 }
             }
             yield return null;

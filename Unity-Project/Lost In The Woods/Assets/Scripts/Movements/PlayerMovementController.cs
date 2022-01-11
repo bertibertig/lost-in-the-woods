@@ -12,6 +12,10 @@ public class PlayerMovementController : MonoBehaviour
     private float currGravity = 0f;
     private float currSpeed = 0f;
 
+    public float maxStamina = 10f;
+    [SerializeField] private float currStamina;
+    private float staminaRegenTime = 3f;
+
     private CharacterController cc;
 
     public bool DisableMovement { get; set; }
@@ -22,6 +26,7 @@ public class PlayerMovementController : MonoBehaviour
         cc = GetComponent<CharacterController>();
         currSpeed = normalSpeed;
         DisableMovement = false;
+        currStamina = maxStamina;
     }
 
     // Update is called once per frame
@@ -31,11 +36,28 @@ public class PlayerMovementController : MonoBehaviour
         {
             if (Input.GetButton("Run"))
             {
-                currSpeed = runningSpeed;
+                currStamina = Mathf.Clamp(currStamina - (Time.deltaTime), 0.0f, maxStamina);
+                staminaRegenTime = 0f;
             }
-            else
+            else if (currStamina < maxStamina)
+            {
+                if (staminaRegenTime >= 3f)
+                {
+                    currStamina = Mathf.Clamp(currStamina + (Time.deltaTime), 0.0f, maxStamina);
+                }
+                else
+                {
+                    staminaRegenTime += Time.deltaTime;
+                }
+            }
+
+            if (currStamina == 0 || staminaRegenTime > 0)
             {
                 currSpeed = normalSpeed;
+            } 
+            else
+            {
+                currSpeed = runningSpeed;
             }
 
             float dx = Input.GetAxis("Horizontal") * currSpeed;
@@ -91,5 +113,10 @@ public class PlayerMovementController : MonoBehaviour
         {
             mouseLook.enabled = true;
         }
+    }
+
+    public bool isNormalSpeed()
+    {
+        return currSpeed == normalSpeed;
     }
 }

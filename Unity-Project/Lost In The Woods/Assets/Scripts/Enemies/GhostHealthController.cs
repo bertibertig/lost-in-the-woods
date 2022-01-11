@@ -8,6 +8,9 @@ public class GhostHealthController : MonoBehaviour
 
     private int hp = 0;
 
+    // spawns item
+    public GameObject objectToSpawn;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +24,7 @@ public class GhostHealthController : MonoBehaviour
         if(hp <= 0)
         {
             Destroy(gameObject);
+            Instantiate(objectToSpawn, transform.position, transform.rotation);
         }
     }
 }

@@ -10,6 +10,7 @@ TagManager:
   - Interactable
   - Empty
   - DialogSystem
+  - Item
   layers:
   - Default
   - TransparentFX
