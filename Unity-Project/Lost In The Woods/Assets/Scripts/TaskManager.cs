@@ -103,6 +103,11 @@ public class Task
 	}
 	
 	TaskManager.TaskState task;
+
+	public static IEnumerator WaitForSeconds(float seconds)
+    {
+		yield return new WaitForSeconds(seconds);
+    }
 }
 
 class TaskManager : MonoBehaviour

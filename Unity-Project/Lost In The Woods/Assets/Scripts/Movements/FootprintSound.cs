@@ -18,7 +18,7 @@ public class FootprintSound : MonoBehaviour
     {
         while (true)
         {
-            if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+            if ((Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0) && !GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovementController>().DisableMovement)
             {
                 soundSource.PlayOneShot(footprintSound[Random.Range(0, footprintSound.Length)]);
                 if (Input.GetButton("Run"))

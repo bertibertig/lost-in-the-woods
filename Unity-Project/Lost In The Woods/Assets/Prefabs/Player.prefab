@@ -859,7 +859,8 @@ MonoBehaviour:
   axis: 0
   minVert: -60
   maxVert: 70
-  sensitivityHor: 2
+  sensitivityHor: 17
+  sensitivityVer: 17
 --- !u!1 &3058346756011782107
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,7 +880,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3058346756011782108
 Transform:
   m_ObjectHideFlags: 0
@@ -945,7 +946,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3058346756011782107}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!114 &1673949994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2531,11 +2532,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114158257989079230, guid: 3d5d1ed9e2204494b8f6ffe02e4c8e97, type: 3}
       propertyPath: customRes.x
-      value: 367
+      value: 640
       objectReference: {fileID: 0}
     - target: {fileID: 114158257989079230, guid: 3d5d1ed9e2204494b8f6ffe02e4c8e97, type: 3}
       propertyPath: customRes.y
-      value: 173
+      value: 360
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d5d1ed9e2204494b8f6ffe02e4c8e97, type: 3}

@@ -16,8 +16,10 @@ public class Raycaster : MonoBehaviour
     [SerializeField]
     private bool lookingAtGhost;
     private bool loadChargeStarted;
+    private bool raycasterDisabled;
 
     private LevelExit levelExit = null;
+    private Interactable interactable = null;
 
     // Start is called before the first frame update
     void Start()
@@ -26,64 +28,80 @@ public class Raycaster : MonoBehaviour
         charge = 0;
         lookingAtGhost = false;
         loadChargeStarted = false;
+        raycasterDisabled = false;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        Vector3 midPoint = new Vector3(camera.pixelWidth / 2, camera.pixelHeight / 2);
-        Ray ray = camera.ScreenPointToRay(midPoint);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit))
+        if (!raycasterDisabled)
         {
-            GameObject hitTarget = hit.transform.gameObject;
+            Vector3 midPoint = new Vector3(camera.pixelWidth / 2, camera.pixelHeight / 2);
+            Ray ray = camera.ScreenPointToRay(midPoint);
+            RaycastHit hit;
 
-            if (hitTarget.CompareTag("GhostEnemy"))
+            if (Physics.Raycast(ray, out hit))
             {
-                lookingAtGhost = true;
-                if (!loadChargeStarted)
-                {
-                    loadChargeStarted = true;
-                    StartCoroutine(LoadCharge());
-                }
-            }
-            else if(hitTarget.CompareTag("LevelExit"))
-            {
-                levelExit = hitTarget.GetComponent<LevelExit>();
-                if(levelExit != null)
-                {
-                    levelExit.LookingAtObject();
-                }
-            }
-            else
-            {
-                lookingAtGhost = false;
-                loadChargeStarted = false;
-                StopCoroutine(LoadCharge());
-                charge = 0;
-                if(chargeUIText != null)
-                    chargeUIText.text = charge.ToString();
-                
-                if(levelExit != null)
-                {
-                    levelExit.LookingAway();
-                }
-            }
+                GameObject hitTarget = hit.transform.gameObject;
 
-            if (Input.GetMouseButtonDown(0))
-            {
                 if (hitTarget.CompareTag("GhostEnemy"))
                 {
-                    GhostHealthController healthController = hitTarget.GetComponent<GhostHealthController>();
-                    healthController.DamageGhost(charge);
+                    lookingAtGhost = true;
+                    if (!loadChargeStarted)
+                    {
+                        loadChargeStarted = true;
+                        StartCoroutine(LoadCharge());
+                    }
+                }
+                else if (hitTarget.CompareTag("LevelExit"))
+                {
+                    levelExit = hitTarget.GetComponent<LevelExit>();
+                    if (levelExit != null)
+                    {
+                        levelExit.LookingAtObject();
+                    }
+                }
+                else if (hitTarget.CompareTag("Interactable"))
+                {
+                    interactable = hitTarget.GetComponent<Interactable>();
+                    if (interactable != null)
+                    {
+                        interactable.LookingAtObject();
+                    }
+                }
+                else
+                {
                     lookingAtGhost = false;
+                    loadChargeStarted = false;
                     StopCoroutine(LoadCharge());
                     charge = 0;
+                    if (chargeUIText != null)
+                        chargeUIText.text = charge.ToString();
+
+                    if (levelExit != null && levelExit.PlayerLookingAtObject)
+                    {
+                        levelExit.LookingAway();
+                    }
+                    if (interactable != null && interactable.PlayerLookingAtObject)
+                    {
+                        interactable.LookingAway();
+                    }
                 }
-                if (hitTarget.CompareTag("LevelExit") && levelExit != null)
+
+                if (Input.GetMouseButtonDown(0))
                 {
-                    levelExit.LookingAway();
+                    if (hitTarget.CompareTag("GhostEnemy"))
+                    {
+                        GhostHealthController healthController = hitTarget.GetComponent<GhostHealthController>();
+                        healthController.DamageGhost(charge);
+                        lookingAtGhost = false;
+                        StopCoroutine(LoadCharge());
+                        charge = 0;
+                    }
+                    if (hitTarget.CompareTag("LevelExit") && levelExit != null)
+                    {
+                        levelExit.LookingAway();
+                    }
                 }
             }
         }
@@ -100,5 +118,17 @@ public class Raycaster : MonoBehaviour
                 chargeUIText.text = charge.ToString();
             }
         }
+    }
+
+    public void DisableRaycaster()
+    {
+        raycasterDisabled = true;
+        chargeUIText.enabled = false;
+    }
+
+    public void EnableRaycaster()
+    {
+        raycasterDisabled = false;
+        chargeUIText.enabled = true;
     }
 }
