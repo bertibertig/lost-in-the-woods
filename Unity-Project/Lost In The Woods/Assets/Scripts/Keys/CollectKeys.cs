@@ -12,15 +12,6 @@ public class CollectKeys : MonoBehaviour
         keysFound = 0;
     }
 
-    private void Update()
-    {
-        if (keysFound == 1)
-        {
-            Debug.Log("Everything Found");
-        }
-        else Debug.Log("Failed");
-    }
-
     private void OnTriggerEnter(Collider item)
     {
         if (item.gameObject.tag == "Item")

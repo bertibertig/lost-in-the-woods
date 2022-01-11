@@ -6,7 +6,13 @@ public class GhostHealthController : MonoBehaviour
 {
     public int maxHp = 100;
 
-    private int hp = 0;
+    private int hp;
+
+    public int Hp
+    {
+        get { return hp; }
+    }
+
 
     // spawns item
     public GameObject objectToSpawn;
@@ -14,6 +20,7 @@ public class GhostHealthController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        hp = 0;
         hp = maxHp;
     }
 

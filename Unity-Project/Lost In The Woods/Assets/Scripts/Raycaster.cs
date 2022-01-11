@@ -93,6 +93,7 @@ public class Raycaster : MonoBehaviour
                     if (hitTarget.CompareTag("GhostEnemy"))
                     {
                         GhostHealthController healthController = hitTarget.GetComponent<GhostHealthController>();
+                        print("Ghost HP: " + healthController.Hp);
                         healthController.DamageGhost(charge);
                         lookingAtGhost = false;
                         StopCoroutine(LoadCharge());

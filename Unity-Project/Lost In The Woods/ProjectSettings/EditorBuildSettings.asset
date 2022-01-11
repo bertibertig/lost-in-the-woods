@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Forest.unity
     guid: 684c13952296ae342a0287b848834c2a
+  - enabled: 1
+    path: Assets/Scenes/Cellar.unity
+    guid: 02e14b27941d43e458a13d5e2c23e32c
   m_configObjects: {}
