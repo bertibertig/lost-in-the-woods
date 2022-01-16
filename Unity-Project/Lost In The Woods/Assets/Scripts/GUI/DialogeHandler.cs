@@ -53,7 +53,10 @@ public class DialogeHandler : MonoBehaviour
                 {
                     methodsToExecuteAfterDialogeEnd.Invoke();
                 }
-                FinishedDialog.Invoke();
+                if (FinishedDialog != null)
+                {
+                    FinishedDialog.Invoke();
+                }
             }
         }
 
