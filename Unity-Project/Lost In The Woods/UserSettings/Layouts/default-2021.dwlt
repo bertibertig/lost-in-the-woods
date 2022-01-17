@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 21
+  controlID: 73
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 100
+  controlID: 74
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 101
+  controlID: 75
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -317,23 +317,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\lukas\Documents\GitHub\lost-in-the-woods\Unity-Project\Lost
     In The Woods
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 28}
-    m_SelectedIDs: 58680000
-    m_LastClickedID: 26712
-    m_ExpandedIDs: 00000000586800005a6800005c6800005e68000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 159}
+    m_SelectedIDs: be6a0000
+    m_LastClickedID: 27326
+    m_ExpandedIDs: 00000000ba6a0000bc6a0000be6a0000c06a0000da730000ea73000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -361,7 +361,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000586800005a6800005c6800005e680000
+    m_ExpandedIDs: 00000000ba6a0000bc6a0000be6a0000c06a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -388,7 +388,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -488,10 +488,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 1961}
-      m_SelectedIDs: c8600000
-      m_LastClickedID: 24776
-      m_ExpandedIDs: 32f8ffff44f8ffff56f8ffff64f8ffff80f8ffffbef8ffffd8f8ffffdcf8ffffe0f8ffffe8f8ffffecf8fffff0f8fffff8f8fffffcf8ffff00f9ffff08f9ffff0cf9ffff10f9ffff18f9ffff1cf9ffff20f9ffff24f9ffff28f9ffff2cf9ffff44f9ffff48f9ffff4cf9ffff54f9ffff58f9ffff5cf9ffff64f9ffff68f9ffff6cf9ffff74f9ffff78f9ffff7cf9ffff84f9ffff88f9ffff8cf9ffff90f9ffff94f9ffff98f9ffffb0f9ffffb4f9ffffb8f9ffffc0f9ffffc4f9ffffc8f9ffffd0f9ffffd4f9ffffd8f9ffffe0f9ffffe4f9ffffe8f9fffff0f9fffff4f9fffff8f9fffffcf9ffff00faffff04faffff1afbffff30fbffff32fbffff925b00003e5c0000605d0000065e00001a610000a46100001262000024630000b8630000
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: be6a0000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 2edaffff44daffff9adbffff68dfffffdef2fffff4f2ffff7af3ffff8af3ffff92f3ffffaaf3ffff2af5ffffc0f5ffff96f6ffff32fbffffd26c0000787e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -740,9 +740,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 63.885204, y: 10.719472, z: 25.565428}
+    m_Target: {x: 12.109049, y: -1.6042538, z: 9.409036}
     speed: 2
-    m_Value: {x: 63.885204, y: 10.719472, z: 25.565428}
+    m_Value: {x: 12.109049, y: -1.6042538, z: 9.409036}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -789,9 +789,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.096919835, y: 0.69000536, z: -0.1654927, w: -0.70635796}
+    m_Target: {x: -0.10693535, y: -0.40309697, z: -0.009315451, w: -0.91540414}
     speed: 2
-    m_Value: {x: -0.09689534, y: 0.6878124, z: -0.16585457, w: -0.7000125}
+    m_Value: {x: -0.10632812, y: -0.4034332, z: -0.008941231, w: -0.90876615}
   m_Size:
     m_Target: 10
     speed: 2
