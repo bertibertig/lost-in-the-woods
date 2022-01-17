@@ -35,33 +35,6 @@ public class DialogeHandler : MonoBehaviour
         dialogStarted = false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetButtonDown("Interact") && dialog != null && dialog.Length > 0)
-        {
-            if (currentDialogCounter < dialog.Length)
-            {
-                PrintNextDialog();
-                currentDialogCounter++;
-            }
-            else if(currentDialogCounter == dialog.Length)
-            {
-                HideDialogUI();
-                player.GetComponent<PlayerMovementController>().UnfreezePlayer();
-                if (methodsToExecuteAfterDialogeEnd != null)
-                {
-                    methodsToExecuteAfterDialogeEnd.Invoke();
-                }
-                if (FinishedDialog != null)
-                {
-                    FinishedDialog.Invoke();
-                }
-            }
-        }
-
-    }
-
     public void StartDialog(string[] dialog, UnityEvent methodsToExecuteAfterDialogeEnd = null)
     {
         player.GetComponent<PlayerMovementController>().FreezePlayer();
@@ -74,6 +47,7 @@ public class DialogeHandler : MonoBehaviour
         this.methodsToExecuteAfterDialogeEnd = methodsToExecuteAfterDialogeEnd;
         PrintNextDialog();
         currentDialogCounter++;
+        new Task(WaitForPlayerInteraction());
     }
 
     private void PrintNextDialog()
@@ -86,5 +60,33 @@ public class DialogeHandler : MonoBehaviour
         dialogeBox.enabled = false;
         dialogeText.enabled = false;
         interactButton.enabled = false;
+    }
+
+    private IEnumerator WaitForPlayerInteraction()
+    {
+        yield return new WaitForSeconds(0.1f);
+        do
+        {
+            if (Input.GetButtonDown("Interact") && dialog != null && dialog.Length > 0)
+            {
+                if (currentDialogCounter < dialog.Length)
+                {
+                    PrintNextDialog(); 
+                }
+                currentDialogCounter++;
+            }
+            yield return null;
+        } while (currentDialogCounter <= dialog.Length);
+
+        HideDialogUI();
+        player.GetComponent<PlayerMovementController>().UnfreezePlayer();
+        if (methodsToExecuteAfterDialogeEnd != null)
+        {
+            methodsToExecuteAfterDialogeEnd.Invoke();
+        }
+        if (FinishedDialog != null)
+        {
+            FinishedDialog.Invoke();
+        }
     }
 }
