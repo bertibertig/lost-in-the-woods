@@ -9,11 +9,12 @@ public class Raycaster : MonoBehaviour
     public float speed = 1;
     public TextMeshProUGUI chargeUIText;
     public int cooldown = 3;
+    [SerializeField]
+    private float minDistance = 3.0f;
 
     private Camera camera;
     [SerializeField, ReadOnly]
     private int charge;
-    [SerializeField]
     private bool lookingAtGhost;
     private bool loadChargeStarted;
     private bool raycasterDisabled;
@@ -43,6 +44,7 @@ public class Raycaster : MonoBehaviour
             if (Physics.Raycast(ray, out hit))
             {
                 GameObject hitTarget = hit.transform.gameObject;
+                float distance = Vector3.Distance(gameObject.transform.position, hitTarget.transform.position);
 
                 if (hitTarget.CompareTag("GhostEnemy"))
                 {
@@ -53,7 +55,7 @@ public class Raycaster : MonoBehaviour
                         StartCoroutine(LoadCharge());
                     }
                 }
-                else if (hitTarget.CompareTag("LevelExit"))
+                else if (hitTarget.CompareTag("LevelExit") && distance <= minDistance)
                 {
                     levelExit = hitTarget.GetComponent<LevelExit>();
                     if (levelExit != null)
@@ -61,7 +63,7 @@ public class Raycaster : MonoBehaviour
                         levelExit.LookingAtObject();
                     }
                 }
-                else if (hitTarget.CompareTag("Interactable"))
+                else if (hitTarget.CompareTag("Interactable") && distance <= minDistance)
                 {
                     interactable = hitTarget.GetComponent<Interactable>();
                     if (interactable != null)

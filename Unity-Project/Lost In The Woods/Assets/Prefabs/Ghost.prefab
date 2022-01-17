@@ -793,6 +793,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHp: 10
+  objectToSpawn: {fileID: 639545482576557461, guid: 8b6b459aa8d2d0944beaa8ee030f2219, type: 3}
 --- !u!1 &7342265780459458506
 GameObject:
   m_ObjectHideFlags: 0

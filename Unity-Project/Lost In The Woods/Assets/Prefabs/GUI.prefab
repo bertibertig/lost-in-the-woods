@@ -1125,6 +1125,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   optionsMenu: {fileID: 3811736393084496462}
+  dialogSystem: {fileID: 2049419226}
+  interactionText: {fileID: 1509267086}
 --- !u!1 &3599767152985936081
 GameObject:
   m_ObjectHideFlags: 0
