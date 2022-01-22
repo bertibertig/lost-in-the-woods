@@ -39,6 +39,9 @@ public class FloatToPlayer : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, maxSpeed);
             transform.LookAt(player.transform.position);
+
+            var rot = transform.rotation;
+            transform.rotation = new Quaternion(0, rot.y, 0, rot.w);
             yield return new WaitForSeconds(secondsBetweenMovement);
         }
     }
