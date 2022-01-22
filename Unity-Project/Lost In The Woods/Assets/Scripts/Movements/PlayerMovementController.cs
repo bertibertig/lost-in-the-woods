@@ -6,15 +6,15 @@ public class PlayerMovementController : MonoBehaviour
 {
     private static float GRAVITY = 9.8f;
 
-    public float normalSpeed = 5.0f;
-    public float runningSpeed = 10.0f;
+    public float normalSpeed = 2.0f;
+    public float runningSpeed = 6.0f;
 
     private float currGravity = 0f;
     private float currSpeed = 0f;
 
-    public float maxStamina = 10f;
+    public float maxStamina = 15f;
     [SerializeField] private float currStamina;
-    private float staminaRegenTime = 3f;
+    private float staminaRegenTime = 1.5f;
 
     private CharacterController cc;
 
@@ -43,7 +43,7 @@ public class PlayerMovementController : MonoBehaviour
             {
                 if (staminaRegenTime >= 1.5f)
                 {
-                    currStamina = Mathf.Clamp(currStamina + (Time.deltaTime), 0.0f, maxStamina);
+                    currStamina = Mathf.Clamp(currStamina + (Time.deltaTime) * 3, 0.0f, maxStamina);
                 }
                 else
                 {
