@@ -727,6 +727,7 @@ GameObject:
   - component: {fileID: 6723738672097501324}
   - component: {fileID: 6723738672097501327}
   - component: {fileID: 6723738672097501326}
+  - component: {fileID: 186898824}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: GhostEnemy
@@ -772,7 +773,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6723738672097501325}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce9494191a393ab469e1e64aa3d4c75d, type: 3}
   m_Name: 
@@ -794,6 +795,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHp: 10
   objectToSpawn: {fileID: 639545482576557461, guid: 8b6b459aa8d2d0944beaa8ee030f2219, type: 3}
+--- !u!114 &186898824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6723738672097501325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d8441b6acfcd2f429747efd1a4e9d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followDistance: 8
+  maxSpeed: 0.01
+  secondsBetweenMovement: 0.1
+  seenPlayer: 0
 --- !u!1 &7342265780459458506
 GameObject:
   m_ObjectHideFlags: 0
