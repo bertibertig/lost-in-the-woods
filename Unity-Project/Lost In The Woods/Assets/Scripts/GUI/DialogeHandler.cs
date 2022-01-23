@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using System.Text.RegularExpressions;
 
 public class DialogeHandler : MonoBehaviour
 {

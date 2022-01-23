@@ -17,6 +17,9 @@ public class OfficeBeginningCutscene : MonoBehaviour
     [SerializeField]
     private string[] dialog;
 
+    [SerializeField]
+    private string[] dialogAfterTelephoneConversation;
+
     //Telephone Sounds
     [SerializeField]
     private AudioSource ringTelephoneAudio;
@@ -29,11 +32,17 @@ public class OfficeBeginningCutscene : MonoBehaviour
     private Interactable interactable;
     private Vector3 initialPositionOfHandset;
     private Quaternion initialRotationOfHandset;
+    private LevelExit levelExit;
 
-    public void StartCutscene()
+    private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         interactable = telephone.GetComponent<Interactable>();
+        levelExit = GameObject.FindGameObjectWithTag("LevelExit").GetComponent<LevelExit>();
+    }
+
+    public void StartCutscene()
+    {  
         interactable.DiableInteraction();
         var waitTesk = new Task(Task.WaitForSeconds(1));
         waitTesk.Finished += RingTelephone;
@@ -71,6 +80,7 @@ public class OfficeBeginningCutscene : MonoBehaviour
 
     private void MoveHandsetToPlayer()
     {
+        //TODO
         initialPositionOfHandset = telephoneHandset.transform.position;
         initialRotationOfHandset = telephoneHandset.transform.rotation;
     }
@@ -85,5 +95,18 @@ public class OfficeBeginningCutscene : MonoBehaviour
     private void DialogHandler_FinishedDialog()
     {
         hangUpTelephoneAudio.Play();
+        dialogHandler.FinishedDialog -= DialogHandler_FinishedDialog;
+    }
+
+    public void AfterTelephoneConversation()
+    {
+        if(dialogAfterTelephoneConversation != null && levelExit != null)
+        {
+            levelExit.TextIfExitIsDisabled = dialogAfterTelephoneConversation;
+        }
+        else
+        {
+            levelExit.EnableExit();
+        }
     }
 }

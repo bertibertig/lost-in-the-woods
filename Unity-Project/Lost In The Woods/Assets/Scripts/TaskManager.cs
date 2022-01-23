@@ -108,6 +108,11 @@ public class Task
     {
 		yield return new WaitForSeconds(seconds);
     }
+
+	public static Task WaitForSecondsTask(float seconds)
+	{
+		return new Task(WaitForSeconds(seconds));
+	}
 }
 
 class TaskManager : MonoBehaviour

@@ -24,6 +24,13 @@ public class LevelExit : MonoBehaviour
 
     public bool DialogEnded { get; set; }
 
+    public string[] TextIfExitIsDisabled
+    {
+        get { return textIfExitIsDisabled; }
+        set { textIfExitIsDisabled = value; }
+    }
+
+
     private void Start()
     {
         PlayerLookingAtObject = false;
