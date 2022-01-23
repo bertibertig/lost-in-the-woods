@@ -23449,7 +23449,7 @@ PrefabInstance:
       objectReference: {fileID: 2800000, guid: 29135c4c1148bc44883907ae1a731420, type: 3}
     - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
       propertyPath: footprintSound.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
       propertyPath: footprintSound.Array.data[0]
@@ -23458,7 +23458,7 @@ PrefabInstance:
     - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
       propertyPath: footprintSound.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: d459696c3a39ab643b28a1e5eec41825, type: 3}
+      objectReference: {fileID: 8300000, guid: f73b5c57dc82aca4ea5c370ba41f5b82, type: 3}
     - target: {fileID: 2033406807, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
       propertyPath: footprintSound.Array.data[2]
       value: 
