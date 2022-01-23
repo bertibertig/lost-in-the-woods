@@ -13,6 +13,14 @@ public class CollectKeys : MonoBehaviour
         keysFound = 0;
     }
 
+    private void Update()
+    {
+        if (keysFound >= 3)
+        {
+            // destroy door in cellar-Main-Room
+        }
+    }
+
     private void OnTriggerEnter(Collider item)
     {
         if (item.gameObject.tag == "Item")
