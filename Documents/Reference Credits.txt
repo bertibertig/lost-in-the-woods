@@ -6,6 +6,10 @@ Ghost Temp: https://stephrobertgames.itch.io/villager-men-psxlowpoly-design
 Telephone: https://studionokoi.itch.io/low-poly-assets-1 
 Cellar-Materials: https://assetstore.unity.com/packages/2d/textures-materials/concrete/yughues-free-concrete-materials-12951
 Flashlight: https://assetstore.unity.com/packages/3d/props/electronics/flashlight-18972
+Shed: https://assetstore.unity.com/packages/3d/environments/urban/the-shed-10303
+Skybox: https://assetstore.unity.com/packages/2d/textures-materials/sky/fantasy-skybox-free-18353
+Sofa: https://jforceg.itch.io/ps1-inspired-furniture-and-others
+Camera: https://www.cgtrader.com/free-3d-models/electronics/video/low-poly-vintage-camera
 Picture Frames: https://assetstore.unity.com/packages/3d/props/interior/picture-frames-with-photos-106907
 
 Filters
@@ -14,14 +18,18 @@ PSXEffects: https://assetstore.unity.com/packages/vfx/shaders/psxeffects-132368
 Sounds
 Telephone ring: https://freesound.org/people/petaj/sounds/28353/ 
 Telephone Pick up Hang up: https://freesound.org/people/crz1990/sounds/135902/
-
-The following three Sounds were changed with Audacity:
+Concrete-Footstep: https://freesound.org/people/InspectorJ/sounds/336598/
+Wood-Footstep: https://freesound.org/people/Galbenshire/sounds/464519/
+Dirt-Footstep: https://freesound.org/people/monte32/sounds/353799/
+Item-PickUp: https://freesound.org/people/TreasureSounds/sounds/332629/
 Ghost Damage 1: https://www.soundsnap.com/sound_design_ghost_scream_sudden
 Ghost Damage 2: https://www.soundsnap.com/sound_design_ghost_scream_stabbing_sudden
 Ghost Death: https://www.soundsnap.com/sound_design_ghost_scream_massive
+Damage01 – Damage03 = cry pain man 06 – 08: https://www.soundfishing.eu/sound/scream-in-pain
 
-Damage01 – Damage03 = cry pain man 06 – 08: https://www.soundfishing.eu/sound/scream-in-pain 
 Music
+Forest Music: Cry of Fear OST "forest" Copyright  Andreas Rönnberg
+Cellar Music: Cry of Fear OST "aparthall2" Copyright  Andreas Rönnberg
 
 Skripts
 Unity Task Manager Copyright chomp
