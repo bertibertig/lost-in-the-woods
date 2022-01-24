@@ -15,14 +15,6 @@ public class Visibilty : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown("space"))
-        {
-            enableVisibility();
-        }
-    }
-
     public void enableVisibility()
     {
         foreach (GameObject obj in changeVisibility)
