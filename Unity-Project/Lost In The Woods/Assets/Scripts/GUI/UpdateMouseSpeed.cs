@@ -27,8 +27,8 @@ public class UpdateMouseSpeed : MonoBehaviour
 
         if(speedText != null && scrollbar != null && lookScript != null)
         {
-            speedText.text = lookScript.SensitivityHor.ToString();
-            scrollbar.value = lookScript.SensitivityHor / maxValue;
+            speedText.text = lookScript.Sensitivity.ToString();
+            scrollbar.value = lookScript.Sensitivity / maxValue;
         }
         else
         {
@@ -48,8 +48,8 @@ public class UpdateMouseSpeed : MonoBehaviour
             double mouseSpeed = Math.Round(scrollbar.value, 2) * maxValue;
             speedText.text = mouseSpeed.ToString();
 
-            lookScript.SensitivityHor = (float) mouseSpeed;
-            lookScript.SensitivityVer = (float) mouseSpeed;
+            lookScript.Sensitivity = (float) mouseSpeed;
+            GameObject.FindGameObjectWithTag("VariableMind").GetComponent<VariableMindController>().MouseSpeed = (float) mouseSpeed;
         }
     }
 }
