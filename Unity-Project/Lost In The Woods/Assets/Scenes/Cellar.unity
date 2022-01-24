@@ -23965,15 +23965,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3058346755455478715, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.32
+      value: 79.07
       objectReference: {fileID: 0}
     - target: {fileID: 3058346755455478715, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.37
+      value: 14.14
       objectReference: {fileID: 0}
     - target: {fileID: 3058346755455478715, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.37
+      value: 24.91
       objectReference: {fileID: 0}
     - target: {fileID: 3058346755455478715, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
       propertyPath: m_LocalRotation.w
@@ -24007,10 +24007,6 @@ PrefabInstance:
       propertyPath: deathText
       value: 
       objectReference: {fileID: 478887361}
-    - target: {fileID: 3245230209556571890, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
-      propertyPath: sceneToLoadAfterDeath
-      value: Cellar
-      objectReference: {fileID: 0}
     - target: {fileID: 3245230209556571890, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
       propertyPath: playerHealthGUIAnimator
       value: 
@@ -40663,7 +40659,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh132088
+  m_Name: pb_Mesh356660
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -94976,25 +94972,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 919249972, guid: ec25b762ff585324d92379687c0e00ac, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 940476234, guid: ec25b762ff585324d92379687c0e00ac, type: 3}
-      propertyPath: showMainMenu
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2246243651225059812, guid: ec25b762ff585324d92379687c0e00ac, type: 3}
       propertyPath: m_Name
       value: GUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 3811736392840508968, guid: ec25b762ff585324d92379687c0e00ac, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3811736392840508968, guid: ec25b762ff585324d92379687c0e00ac, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5434183217911588714, guid: ec25b762ff585324d92379687c0e00ac, type: 3}
       propertyPath: m_RootOrder
