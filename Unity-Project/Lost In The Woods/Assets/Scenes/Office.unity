@@ -525,7 +525,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -13719,6 +13719,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 37573768, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: sensitivity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 581298733, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1142687067479174703, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
       propertyPath: chargeUIText
       value: 
