@@ -12,6 +12,7 @@ TagManager:
   - DialogSystem
   - Item
   - Camera
+  - VariableMind
   layers:
   - Default
   - TransparentFX

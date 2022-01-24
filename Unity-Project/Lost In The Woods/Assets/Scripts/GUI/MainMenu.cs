@@ -31,6 +31,7 @@ public class MainMenu : MonoBehaviour
             if(player != null)
             {
                 player.GetComponent<PlayerMovementController>().FreezePlayer();
+                player.GetComponentInChildren<Flashlight>().FlashLightDisabled = true;
             }
             Cursor.visible = true;
         }

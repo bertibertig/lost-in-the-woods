@@ -25,7 +25,6 @@ public class PickUpFlashlight : MonoBehaviour
         interactedOnce = false;
         player = GameObject.FindGameObjectWithTag("Player");
         flashlightScript = player.GetComponentInChildren<Flashlight>();
-        flashlightScript.enabled = false;
         levelExit = GameObject.FindGameObjectWithTag("LevelExit").GetComponent<LevelExit>();
 
         if (notificationText != null)
@@ -45,7 +44,7 @@ public class PickUpFlashlight : MonoBehaviour
             levelExit.EnableExit();
 
             fadeText.FadeIn(fadeInOutSeconds, flashlightUsageText).Finished += FadeOutTask_Finished;
-            flashlightScript.enabled = true;
+            flashlightScript.GetComponentInChildren<Flashlight>().FlashLightDisabled = false;
         }
     }
 
