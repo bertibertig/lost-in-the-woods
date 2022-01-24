@@ -992,6 +992,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 940476234, guid: ec25b762ff585324d92379687c0e00ac, type: 3}
+      propertyPath: showMainMenu
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 940476234, guid: ec25b762ff585324d92379687c0e00ac, type: 3}
       propertyPath: startCutscene
       value: 
       objectReference: {fileID: 2066068290}
