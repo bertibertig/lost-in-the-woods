@@ -24004,6 +24004,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3245230209556571890, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: deathText
+      value: 
+      objectReference: {fileID: 478887361}
+    - target: {fileID: 3245230209556571890, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
       propertyPath: sceneToLoadAfterDeath
       value: Cellar
       objectReference: {fileID: 0}
@@ -29847,6 +29851,17 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &478887361 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1509267088, guid: ec25b762ff585324d92379687c0e00ac, type: 3}
+  m_PrefabInstance: {fileID: 1857576631}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &480408145
 GameObject:
   m_ObjectHideFlags: 0

@@ -1408,6 +1408,8 @@ MonoBehaviour:
   maxHealth: 3
   playerMaxBackwardsRotationX: -90
   killPlayerOnZeroHealth: 1
+  deathText: {fileID: 0}
+  sceneToLoadAfterDeath: Cellar
   damageSounds:
   - {fileID: 584112216}
   - {fileID: 1578702341}
