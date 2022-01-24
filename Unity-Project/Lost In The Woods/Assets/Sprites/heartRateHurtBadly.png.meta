@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: efd4ff286e741e94ca2a34f3d91360a4
+guid: 27ef0ad7efba4ec4e97983ecc864f905
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: heartRateNormal_0
+      name: heartRateHurtBadly_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1c6e22f8de54464fb02f670b869790e
-      internalID: -778229279
+      spriteID: e50736d3ab595d6469e4a0339cc3f8bf
+      internalID: 529443035
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartRateNormal_1
+      name: heartRateHurtBadly_1
       rect:
         serializedVersion: 2
         x: 52
@@ -139,14 +139,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb0cf5748419de74d8c787f2c26de1e5
-      internalID: 1427809907
+      spriteID: edb2067c1b9ac904a9b07817d2f70308
+      internalID: 247650800
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartRateNormal_2
+      name: heartRateHurtBadly_2
       rect:
         serializedVersion: 2
         x: 104
@@ -160,14 +160,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7aa8b9d120f9ef34c811072538d41879
-      internalID: -1110738026
+      spriteID: 6fb68a0c0e9a8864fb6b87daa1a9c8e5
+      internalID: 209143039
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartRateNormal_3
+      name: heartRateHurtBadly_3
       rect:
         serializedVersion: 2
         x: 156
@@ -181,14 +181,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15b83e09655400a4ab9e5bed8e069f56
-      internalID: 2063197081
+      spriteID: 1708ecf044cf4a74d91efc8f1d763723
+      internalID: -2005423607
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartRateNormal_4
+      name: heartRateHurtBadly_4
       rect:
         serializedVersion: 2
         x: 208
@@ -202,14 +202,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 264489a88cebd3b4b87d7cda2336cad1
-      internalID: -1130891841
+      spriteID: 41083b78919abc84fbb23b6c7df98550
+      internalID: -203610535
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartRateNormal_5
+      name: heartRateHurtBadly_5
       rect:
         serializedVersion: 2
         x: 260
@@ -223,14 +223,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4539e595df4a85047b36b9d777ad330a
-      internalID: -1053132451
+      spriteID: bb8df71b29117744aa4d3ef2f136829e
+      internalID: 1567891160
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartRateNormal_6
+      name: heartRateHurtBadly_6
       rect:
         serializedVersion: 2
         x: 312
@@ -244,14 +244,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ee01e1f441cf4a449ec49352e9cb3d6
-      internalID: -2031954474
+      spriteID: 9f1d5230132a7c048a35fc6db5eb9924
+      internalID: 1513670631
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartRateNormal_7
+      name: heartRateHurtBadly_7
       rect:
         serializedVersion: 2
         x: 364
@@ -265,14 +265,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 507b8e7e55a965f4aac9d94e29f0ef6b
-      internalID: 1448651716
+      spriteID: 79dd36a853d9a4a42946fd8e1a7a9fb2
+      internalID: 556804261
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartRateNormal_8
+      name: heartRateHurtBadly_8
       rect:
         serializedVersion: 2
         x: 416
@@ -286,14 +286,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36770ae9346ffb14c92ce758c8c0eec3
-      internalID: -968717116
+      spriteID: e7bb794501a505d49963f5f1453a42fb
+      internalID: 1205843183
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartRateNormal_9
+      name: heartRateHurtBadly_9
       rect:
         serializedVersion: 2
         x: 468
@@ -307,14 +307,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e8527bc3fd86e748926955b74513a64
-      internalID: 2006955132
+      spriteID: 6448cdc8ec04ea3429dd65297810724c
+      internalID: -1208792531
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartRateNormal_10
+      name: heartRateHurtBadly_10
       rect:
         serializedVersion: 2
         x: 520
@@ -328,14 +328,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a22c5ab983c7be4a9db9f195f0c1fe8
-      internalID: -1909995005
+      spriteID: b6e31a48d227ded4e86e78e655ab20e3
+      internalID: 190330641
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartRateNormal_11
+      name: heartRateHurtBadly_11
       rect:
         serializedVersion: 2
         x: 572
@@ -349,14 +349,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf8e5670f34ba1c479dd2d4568f327c0
-      internalID: -680280659
+      spriteID: c8334c226e4b6e640b0e596f8faa27a1
+      internalID: 1770722
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartRateNormal_12
+      name: heartRateHurtBadly_12
       rect:
         serializedVersion: 2
         x: 624
@@ -370,14 +370,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b547862a9db4cf64bbf5326a20511420
-      internalID: -1885904973
+      spriteID: 23a8c32344dbbd6439731b821427cc92
+      internalID: -681018528
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartRateNormal_13
+      name: heartRateHurtBadly_13
       rect:
         serializedVersion: 2
         x: 676
@@ -391,14 +391,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79171c07eb2586441b0148a6d43a4e95
-      internalID: 1639121773
+      spriteID: cb0bc56e107263b48b080fa427f3af15
+      internalID: -909820113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartRateNormal_14
+      name: heartRateHurtBadly_14
       rect:
         serializedVersion: 2
         x: 728
@@ -412,8 +412,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80efa57bb3724c149a672409c24f4180
-      internalID: -1941774934
+      spriteID: d3b4da95126ddff40b3d91e41d0a1d5a
+      internalID: -1172895207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heartRateHurtBadly_15
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 0
+        width: 50
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcdd18703fea3b04ab56474bdfc45dbd
+      internalID: 1810480579
       vertices: []
       indices: 
       edges: []
@@ -421,7 +442,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 16d4f92550417e7488076dbb16db805d
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -429,21 +450,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      heartRateNormal_3: 2063197081
-      heartRateNormal_6: -2031954474
-      heartRateNormal_7: 1448651716
-      heartRateNormal_0: -778229279
-      heartRateNormal_8: -968717116
-      heartRateNormal_14: -1941774934
-      heartRateNormal_2: -1110738026
-      heartRateNormal_12: -1885904973
-      heartRateNormal_1: 1427809907
-      heartRateNormal_4: -1130891841
-      heartRateNormal_5: -1053132451
-      heartRateNormal_9: 2006955132
-      heartRateNormal_11: -680280659
-      heartRateNormal_13: 1639121773
-      heartRateNormal_10: -1909995005
+      heartRateHurtBadly_13: -909820113
+      heartRateHurtBadly_14: -1172895207
+      heartRateHurtBadly_5: 1567891160
+      heartRateHurtBadly_3: -2005423607
+      heartRateHurtBadly_6: 1513670631
+      heartRateHurtBadly_8: 1205843183
+      heartRateHurtBadly_7: 556804261
+      heartRateHurtBadly_1: 247650800
+      heartRateHurtBadly_9: -1208792531
+      heartRateHurtBadly_12: -681018528
+      heartRateHurtBadly_0: 529443035
+      heartRateHurtBadly_2: 209143039
+      heartRateHurtBadly_11: 1770722
+      heartRateHurtBadly_15: 1810480579
+      heartRateHurtBadly_4: -203610535
+      heartRateHurtBadly_10: 190330641
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

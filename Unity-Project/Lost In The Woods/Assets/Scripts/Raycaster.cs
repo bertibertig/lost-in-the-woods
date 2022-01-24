@@ -126,12 +126,18 @@ public class Raycaster : MonoBehaviour
     public void DisableRaycaster()
     {
         raycasterDisabled = true;
-        chargeUIText.enabled = false;
+        if (chargeUIText != null)
+        {
+            chargeUIText.enabled = false;
+        }
     }
 
     public void EnableRaycaster()
     {
         raycasterDisabled = false;
-        chargeUIText.enabled = true;
+        if (chargeUIText != null)
+        {
+            chargeUIText.enabled = true;
+        }
     }
 }

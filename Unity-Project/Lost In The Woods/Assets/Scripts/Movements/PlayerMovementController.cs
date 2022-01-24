@@ -81,6 +81,7 @@ public class PlayerMovementController : MonoBehaviour
         GameObject gui = GameObject.FindGameObjectWithTag("GUI");
         GetComponentInChildren<Raycaster>().DisableRaycaster();
         MouseLook mouseLook = gameObject.GetComponent<MouseLook>();
+        Flashlight flashlight = GetComponentInChildren<Flashlight>();
         if (gui != null)
         {
             GUIInputHandler guiInputHandler = gui.GetComponent<GUIInputHandler>();
@@ -93,6 +94,10 @@ public class PlayerMovementController : MonoBehaviour
         {
             mouseLook.enabled = false;
         }
+        if(flashlight != null)
+        {
+            flashlight.enabled = false;
+        }
     }
 
     public void UnfreezePlayer()
@@ -101,6 +106,7 @@ public class PlayerMovementController : MonoBehaviour
         GameObject gui = GameObject.FindGameObjectWithTag("GUI");
         GetComponentInChildren<Raycaster>().EnableRaycaster();
         MouseLook mouseLook = gameObject.GetComponent<MouseLook>();
+        Flashlight flashlight = GetComponentInChildren<Flashlight>();
         if (gui != null)
         {
             GUIInputHandler guiInputHandler = gui.GetComponent<GUIInputHandler>();
@@ -112,6 +118,10 @@ public class PlayerMovementController : MonoBehaviour
         if (mouseLook != null)
         {
             mouseLook.enabled = true;
+        }
+        if (flashlight != null)
+        {
+            flashlight.enabled = true;
         }
     }
 
