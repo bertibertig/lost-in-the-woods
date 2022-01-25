@@ -7690,6 +7690,71 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1001 &260593714
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2954559610215865640, guid: 4dfac4c9e2725444e9af07fe2835f2a5, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 57a92378270d8e044a16ce613ae05c4d, type: 3}
+    - target: {fileID: 2954559610497872768, guid: 4dfac4c9e2725444e9af07fe2835f2a5, type: 3}
+      propertyPath: m_Name
+      value: AmbienceMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954559610497872770, guid: 4dfac4c9e2725444e9af07fe2835f2a5, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954559610497872770, guid: 4dfac4c9e2725444e9af07fe2835f2a5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954559610497872770, guid: 4dfac4c9e2725444e9af07fe2835f2a5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954559610497872770, guid: 4dfac4c9e2725444e9af07fe2835f2a5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954559610497872770, guid: 4dfac4c9e2725444e9af07fe2835f2a5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954559610497872770, guid: 4dfac4c9e2725444e9af07fe2835f2a5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954559610497872770, guid: 4dfac4c9e2725444e9af07fe2835f2a5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954559610497872770, guid: 4dfac4c9e2725444e9af07fe2835f2a5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954559610497872770, guid: 4dfac4c9e2725444e9af07fe2835f2a5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954559610497872770, guid: 4dfac4c9e2725444e9af07fe2835f2a5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954559610497872770, guid: 4dfac4c9e2725444e9af07fe2835f2a5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954559610497872771, guid: 4dfac4c9e2725444e9af07fe2835f2a5, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ab1fbc7f34904e8488ac8ab853094141, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4dfac4c9e2725444e9af07fe2835f2a5, type: 3}
 --- !u!43 &283293980
 Mesh:
   m_ObjectHideFlags: 0
