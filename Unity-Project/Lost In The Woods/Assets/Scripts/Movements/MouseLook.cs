@@ -26,6 +26,8 @@ public class MouseLook : MonoBehaviour
         set { sensitivity = value; }
     }
 
+    private static float DEFAULT_SENSITIVITY = 5;
+
     private void Start()
     {
         GameObject variableMind = GameObject.FindGameObjectWithTag("VariableMind");
@@ -36,7 +38,7 @@ public class MouseLook : MonoBehaviour
         }
         else
         {
-            sensitivity = 5;
+            sensitivity = DEFAULT_SENSITIVITY;
         }
     }
 
@@ -46,21 +48,21 @@ public class MouseLook : MonoBehaviour
         if (axis == RotateAxis.MouseX)
         {
             //horizontal
-            transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivity, 0);
+            transform.Rotate(0, Input.GetAxis("Mouse X") * Sensitivity, 0);
         }
         else if (axis == RotateAxis.MouseY)
         {
             //vertical
-            rotX -= Input.GetAxis("Mouse Y") * sensitivity;
+            rotX -= Input.GetAxis("Mouse Y") * Sensitivity;
             rotX = Mathf.Clamp(rotX, minVert, maxVert);
             float rotY = transform.localEulerAngles.y;
             transform.localEulerAngles = new Vector3(rotX, rotY, 0);
         }
-        else if (Cursor.lockState == CursorLockMode.Confined)
+        else if (axis == RotateAxis.MouseXY)
         {
-            rotX -= Input.GetAxis("Mouse Y") * sensitivity;
+            rotX -= Input.GetAxis("Mouse Y") * Sensitivity;
             rotX = Mathf.Clamp(rotX, minVert, maxVert);
-            float delta = Input.GetAxis("Mouse X") * sensitivity;
+            float delta = Input.GetAxis("Mouse X") * Sensitivity;
             float rotY = transform.localEulerAngles.y + delta;
             transform.localEulerAngles = new Vector3(rotX, rotY, 0);
         }

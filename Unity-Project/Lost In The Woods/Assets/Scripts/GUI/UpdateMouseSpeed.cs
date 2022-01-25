@@ -21,6 +21,7 @@ public class UpdateMouseSpeed : MonoBehaviour
         if(player != null)
         {
             lookScript = player.GetComponent<MouseLook>();
+            lookScript.Sensitivity = 5;
         }
         scrollbar = GetComponentInParent<Scrollbar>();
         speedText = GetComponent<TextMeshProUGUI>();
