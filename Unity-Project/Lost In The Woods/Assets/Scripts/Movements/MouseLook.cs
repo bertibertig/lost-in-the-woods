@@ -18,7 +18,7 @@ public class MouseLook : MonoBehaviour
     private float rotX = 0.0f;
 
     [SerializeField]
-    private float sensitivity = 17.0f;
+    private float sensitivity = 5;
 
     public float Sensitivity
     {
@@ -32,7 +32,7 @@ public class MouseLook : MonoBehaviour
 
         if(variableMind != null)
         {
-            sensitivity = variableMind.GetComponent<VariableMindController>().MouseSpeed;
+            sensitivity = variableMind.GetComponent<VariableMindController>().Sensitivity;
         }
     }
 

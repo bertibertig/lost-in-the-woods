@@ -6,9 +6,20 @@ public class VariableMindController : MonoBehaviour
 {
     private GameObject player;
 
-    public float MouseSpeed { get; set; }
+    private float sensitivity = 5;
+    private bool cameraPickedUp = false;
 
-    public bool CameraPickedUp { get; set; }
+    public float Sensitivity
+    {
+        get { return sensitivity = 5; }
+        set { sensitivity  = value; }
+    }
+
+    public bool CameraPickedUp
+    {
+        get { return cameraPickedUp; }
+        set { cameraPickedUp = value; }
+    }
 
     private void Start()
     {
@@ -17,10 +28,8 @@ public class VariableMindController : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
-            MouseSpeed = player.GetComponentInChildren<MouseLook>().Sensitivity;
+            player.GetComponentInChildren<MouseLook>().Sensitivity = sensitivity;
         }
-
-        CameraPickedUp = false;
-        MouseSpeed = 5;
+        
     }
 }

@@ -81,7 +81,7 @@ public class GUIInputHandler : MonoBehaviour
             optionsOpened = !optionsOpened;
         }
 
-        if(Input.GetButtonDown("Camera") && cameraUI != null && !OnMainMenu)
+        if(Input.GetButtonDown("Camera") && cameraUI != null && !OnMainMenu && CameraPickedUp)
         {
             if(!CameraDisplayed)
             {

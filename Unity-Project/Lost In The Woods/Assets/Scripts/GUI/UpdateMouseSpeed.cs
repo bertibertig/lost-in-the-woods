@@ -51,7 +51,7 @@ public class UpdateMouseSpeed : MonoBehaviour
             lookScript.Sensitivity = (float) mouseSpeed;
             if (GameObject.FindGameObjectWithTag("VariableMind") != null)
             {
-                GameObject.FindGameObjectWithTag("VariableMind").GetComponent<VariableMindController>().MouseSpeed = (float)mouseSpeed;
+                GameObject.FindGameObjectWithTag("VariableMind").GetComponent<VariableMindController>().Sensitivity = (float)mouseSpeed;
             }
         }
     }
