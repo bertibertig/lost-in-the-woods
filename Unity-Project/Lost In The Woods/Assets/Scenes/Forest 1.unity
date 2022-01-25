@@ -745,6 +745,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f23a7bd4019ab224ca19d631ab74d162, type: 3}
   m_PrefabInstance: {fileID: 7675830}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &16366856 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4174654019052734734, guid: 67eebd7b9daae624485d3c10d2625a78, type: 3}
+  m_PrefabInstance: {fileID: 1846802461}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &54464198
 GameObject:
   m_ObjectHideFlags: 0
@@ -11444,6 +11449,7 @@ MonoBehaviour:
   - {fileID: 2085299715}
   - {fileID: 1503692776}
   - {fileID: 156941280}
+  - {fileID: 16366856}
 --- !u!43 &569406568
 Mesh:
   m_ObjectHideFlags: 0
@@ -31144,7 +31150,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4174654019052734838, guid: 67eebd7b9daae624485d3c10d2625a78, type: 3}
   m_PrefabInstance: {fileID: 1846802461}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 16366856}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bfb6fc52f1ea2a44bb51a66479f76a4b, type: 3}
@@ -33264,16 +33270,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8149479778158062140, guid: ec25b762ff585324d92379687c0e00ac, type: 3}
       propertyPath: m_fontSize
-      value: 80
+      value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 8149479778158062140, guid: ec25b762ff585324d92379687c0e00ac, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 49b02f184f2dd634e90d4d55e2387751, type: 2}
     - target: {fileID: 8149479778158062140, guid: ec25b762ff585324d92379687c0e00ac, type: 3}
       propertyPath: m_fontStyle
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8149479778158062140, guid: ec25b762ff585324d92379687c0e00ac, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8149479778158062140, guid: ec25b762ff585324d92379687c0e00ac, type: 3}
       propertyPath: m_overflowMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8149479778158062140, guid: ec25b762ff585324d92379687c0e00ac, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -3712985480795296038, guid: 49b02f184f2dd634e90d4d55e2387751, type: 2}
     - target: {fileID: 8149479778158062140, guid: ec25b762ff585324d92379687c0e00ac, type: 3}
       propertyPath: m_verticalMapping
       value: 1
