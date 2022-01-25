@@ -10,7 +10,7 @@ public class RitualRoomOutro : MonoBehaviour
     [SerializeField]
     private string[] conversationText;
     [SerializeField]
-    private GameObject lookTowardsGameObject;
+    private GameObject woman;
     [SerializeField]
     private AudioSource gunShotSound;
     [SerializeField]
@@ -34,7 +34,7 @@ public class RitualRoomOutro : MonoBehaviour
         {
             outroStarted = true;
             dialogeHandler.StartDialog(outroStartText);
-            if (lookTowardsGameObject != null)
+            if (woman != null)
             {
                 dialogeHandler.FinishedDialog += SpawnWomenBehindPlayerAndStartConversation;
             }
@@ -43,7 +43,9 @@ public class RitualRoomOutro : MonoBehaviour
 
     private void SpawnWomenBehindPlayerAndStartConversation()
     {
-        player.transform.LookAt(lookTowardsGameObject.transform);
+        woman.SetActive(true);
+        woman.GetComponent<LookTowardsPlayer>().LookAtPlayer(-90,90);
+        player.transform.LookAt(woman.transform);
         dialogeHandler.StartDialog(conversationText);
 
         dialogeHandler.FinishedDialog -= SpawnWomenBehindPlayerAndStartConversation;
@@ -57,11 +59,6 @@ public class RitualRoomOutro : MonoBehaviour
         player.GetComponent<PlayerMovementController>().FreezePlayer();
 
         dialogeHandler.FinishedDialog -= SpawnWomenBehindPlayerAndStartConversation;
-        Task.WaitForSecondsTask(2).Finished += RitualRoomOutro_Finished;
-    }
-
-    private void RitualRoomOutro_Finished(bool manual)
-    {
-        player.GetComponent<HealthController>().KillPlayer("You were shot! The game is over.", "Office", true);
+        player.GetComponent<HealthController>().KillPlayer("You were shot! The End! You can't change that!", "Office", true);
     }
 }
