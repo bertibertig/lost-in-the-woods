@@ -12893,12 +12893,22 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   dialog:
-  - 'Detective: Detective Agency Hans and Wurst. How can I help you?'
-  - 'Women: Please, you got to help me. My sister has been missing for over a week
-    now.'
-  - 'Detective: Please, calm down! Where was she last seen?'
-  - 'Women: I last heard from her when she entered the Poestlingbergwald.'
-  - 'Detective: OK, I will get right on the case! Speak to you soon!'
+  - <color=#933D2A>Detective:</color> Detective Hans Meinhard speaking. To whom am
+    I talking?
+  - <color=#CECC56>Women:</color> Good Evening Detective. My name is Sabine Mayers.
+    My daughter has been missing for two days now. I tried to get the police on the
+    case, but to no avail... Please, you have to help me. I do have the money!
+  - <color=#933D2A>Detective:</color> Now mam, please calm down first. Where was
+    your daughter last seen?
+  - <color=#CECC56>Women:</color> She was last seen when she entered the Poestlingbergwald.
+    She said that there was a haunted cabin somewhere in the woods and she and her
+    friends wanted to visited there to have a look for themselves.
+  - <color=#933D2A>Detective:</color> Ok mam, leave it to me. I will see what I can
+    find and contact you as soon as I found your daughter.
+  - <color=#CECC56>Women:</color> Thank you, Mister Meinhard! I wish you the best
+    of luck. Please find my daugther!
+  - <color=#933D2A>Detective:</color> No worries, Goodbye.
+  - <color=#CECC56>Women:</color> Goodbye.
   dialogAfterTelephoneConversation:
   - I shloud take my flashlight with me!
   ringTelephoneAudio: {fileID: 932553342}
@@ -13710,7 +13720,7 @@ PrefabInstance:
     - target: {fileID: 1142687067479174703, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
       propertyPath: chargeUIText
       value: 
-      objectReference: {fileID: 3947350277110118955}
+      objectReference: {fileID: 0}
     - target: {fileID: 3058346755455478663, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
       propertyPath: m_Name
       value: Player
@@ -13851,17 +13861,6 @@ Transform:
   m_Father: {fileID: 7969375937726431476}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3947350277110118955 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3947350276857594335, guid: ec25b762ff585324d92379687c0e00ac, type: 3}
-  m_PrefabInstance: {fileID: 252918772}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4835774073734695482
 GameObject:
   m_ObjectHideFlags: 0
