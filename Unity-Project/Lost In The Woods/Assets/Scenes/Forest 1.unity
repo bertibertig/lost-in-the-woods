@@ -1282,6 +1282,10 @@ PrefabInstance:
       propertyPath: maxStamina
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 3058346755455478714, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: outOfBreath
+      value: 
+      objectReference: {fileID: 8300000, guid: d2752b62d6f09294c89fc820d7e2aeeb, type: 3}
     - target: {fileID: 3058346755455478715, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
       propertyPath: m_RootOrder
       value: 0
