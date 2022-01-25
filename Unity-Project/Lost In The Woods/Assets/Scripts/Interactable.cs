@@ -53,7 +53,7 @@ public class Interactable : MonoBehaviour
 
     }
 
-    public void DiableInteraction()
+    public void DisableInteraction()
     {
         gameObject.tag = "Empty";
     }
