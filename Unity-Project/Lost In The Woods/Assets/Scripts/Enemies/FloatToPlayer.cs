@@ -9,6 +9,8 @@ public class FloatToPlayer : MonoBehaviour
     [SerializeField]
     private float maxSpeed = 0.1f;
     [SerializeField]
+    private float minSpeed = 0.01f;
+    [SerializeField]
     private float secondsBetweenMovement = 0.1f;
     [SerializeField]
     private bool seenPlayer;
@@ -39,7 +41,7 @@ public class FloatToPlayer : MonoBehaviour
     {
         while(seenPlayer)
         {
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, maxSpeed);
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, Random.Range(minSpeed, maxSpeed));
             transform.LookAt(player.transform.position);
 
             var rot = transform.rotation;
