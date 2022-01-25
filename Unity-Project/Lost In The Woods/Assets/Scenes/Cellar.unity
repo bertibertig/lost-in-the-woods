@@ -3585,17 +3585,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!114 &59139381 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3947350276857594335, guid: ec25b762ff585324d92379687c0e00ac, type: 3}
-  m_PrefabInstance: {fileID: 1857576631}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!43 &60592128
 Mesh:
   m_ObjectHideFlags: 0
@@ -24493,7 +24482,7 @@ PrefabInstance:
     - target: {fileID: 1142687067479174703, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
       propertyPath: chargeUIText
       value: 
-      objectReference: {fileID: 59139381}
+      objectReference: {fileID: 0}
     - target: {fileID: 3058346755455478663, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
       propertyPath: m_Name
       value: Player
@@ -104752,6 +104741,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2954559610215865640, guid: 4dfac4c9e2725444e9af07fe2835f2a5, type: 3}
+      propertyPath: m_Volume
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 2954559610497872768, guid: 4dfac4c9e2725444e9af07fe2835f2a5, type: 3}
       propertyPath: m_Name
       value: AmbienceMusic
@@ -104799,6 +104792,10 @@ PrefabInstance:
     - target: {fileID: 2954559610497872770, guid: 4dfac4c9e2725444e9af07fe2835f2a5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954559610497872771, guid: 4dfac4c9e2725444e9af07fe2835f2a5, type: 3}
+      propertyPath: m_Volume
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dfac4c9e2725444e9af07fe2835f2a5, type: 3}

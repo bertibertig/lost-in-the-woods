@@ -19,8 +19,8 @@ public class PlayerMovementController : MonoBehaviour
     private CharacterController cc;
 
     [SerializeField]
-    private AudioClip outOfBreath;
-    private AudioSource audioSrc;
+    private AudioSource playerOutOfBreath;
+    private bool outOfStaminaSoundPlayed;
 
     public bool DisableMovement { get; set; }
 
@@ -31,7 +31,7 @@ public class PlayerMovementController : MonoBehaviour
         currSpeed = normalSpeed;
         DisableMovement = false;
         currStamina = maxStamina;
-        audioSrc = GetComponent<AudioSource>();
+        outOfStaminaSoundPlayed = false;
     }
 
     // Update is called once per frame
@@ -43,17 +43,22 @@ public class PlayerMovementController : MonoBehaviour
             {
                 currStamina = Mathf.Clamp(currStamina - (Time.deltaTime), 0.0f, maxStamina);
                 staminaRegenTime = 0f;
+
+                if (!outOfStaminaSoundPlayed && currStamina <= 1)
+                {
+                    outOfStaminaSoundPlayed = true;
+                    playerOutOfBreath.Play();
+                }
             }
             else if (currStamina < maxStamina)
             {
                 if (staminaRegenTime >= 1.5f)
                 {
                     currStamina = Mathf.Clamp(currStamina + (Time.deltaTime) * 3, 0.0f, maxStamina);
+                    outOfStaminaSoundPlayed = false;
                 }
                 else
                 {
-                    audioSrc.clip = outOfBreath;
-                    audioSrc.PlayDelayed(0);
                     staminaRegenTime += Time.deltaTime;
                 }
             }

@@ -34,6 +34,10 @@ public class MouseLook : MonoBehaviour
         {
             sensitivity = variableMind.GetComponent<VariableMindController>().Sensitivity;
         }
+        else
+        {
+            sensitivity = 5;
+        }
     }
 
     // Update is called once per frame
