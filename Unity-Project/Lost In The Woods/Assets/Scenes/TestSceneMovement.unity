@@ -221,6 +221,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &732832356 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 919249974, guid: ec25b762ff585324d92379687c0e00ac, type: 3}
+  m_PrefabInstance: {fileID: 1255135431}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1255135431
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -372,6 +377,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1648186499 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1509267088, guid: ec25b762ff585324d92379687c0e00ac, type: 3}
+  m_PrefabInstance: {fileID: 1255135431}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1832520303
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -488,5 +504,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3245230209556571890, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: deathText
+      value: 
+      objectReference: {fileID: 1648186499}
+    - target: {fileID: 3245230209556571890, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
+      propertyPath: playerHealthGUIAnimator
+      value: 
+      objectReference: {fileID: 732832356}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}

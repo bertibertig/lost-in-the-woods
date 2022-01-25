@@ -18514,7 +18514,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-49832
+  m_Name: pb_Mesh36576
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -21311,6 +21311,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   downSpeed: 10
+  dialogToDisplayIfKeysNotFound:
+  - <color=#933D2A>Detective:</color> Locked again! Hm, there seem to be three keyholes.
+    Maybe I can find the keys in the rooms behind me.
 --- !u!64 &316674649
 MeshCollider:
   m_ObjectHideFlags: 0

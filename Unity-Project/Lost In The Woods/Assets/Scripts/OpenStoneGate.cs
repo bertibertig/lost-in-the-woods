@@ -5,6 +5,15 @@ using UnityEngine;
 public class OpenStoneGate : MonoBehaviour
 {
     public int downSpeed = 2;
+    [SerializeField]
+    private string[] dialogToDisplayIfKeysNotFound;
+
+    private DialogeHandler dialogeHandler;
+
+    private void Start()
+    {
+        dialogeHandler = GameObject.FindGameObjectWithTag("DialogSystem").GetComponent<DialogeHandler>();
+    }
 
     public void openGate()
     {
@@ -14,7 +23,7 @@ public class OpenStoneGate : MonoBehaviour
         }
         else
         {
-            print(3 - CollectKeys.keysFound + " keys are missing");
+            dialogeHandler.StartDialog(dialogToDisplayIfKeysNotFound);
         }
     }
 
