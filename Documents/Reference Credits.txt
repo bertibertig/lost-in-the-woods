@@ -2,7 +2,7 @@ Models
 Arms: https://cemckrc.itch.io/fps-arms-psx-style 
 Trees: https://elegantcrow.itch.io/psx-retro-style-tree-pack 
 Office: https://aleksandcazal.itch.io/detective-room 
-Ghost Temp: https://stephrobertgames.itch.io/villager-men-psxlowpoly-design
+Ghost: https://stephrobertgames.itch.io/villager-men-psxlowpoly-design
 Telephone: https://studionokoi.itch.io/low-poly-assets-1 
 Cellar-Materials: https://assetstore.unity.com/packages/2d/textures-materials/concrete/yughues-free-concrete-materials-12951
 Flashlight: https://assetstore.unity.com/packages/3d/props/electronics/flashlight-18972
@@ -11,6 +11,7 @@ Skybox: https://assetstore.unity.com/packages/2d/textures-materials/sky/fantasy-
 Sofa: https://jforceg.itch.io/ps1-inspired-furniture-and-others
 Camera: https://www.cgtrader.com/free-3d-models/electronics/video/low-poly-vintage-camera
 Picture Frames: https://assetstore.unity.com/packages/3d/props/interior/picture-frames-with-photos-106907
+Revolver: https://assetstore.unity.com/packages/3d/props/guns/guns-pack-low-poly-guns-collection-192553
 
 Filters
 PSXEffects: https://assetstore.unity.com/packages/vfx/shaders/psxeffects-132368 

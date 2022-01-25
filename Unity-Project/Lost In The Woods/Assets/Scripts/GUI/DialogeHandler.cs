@@ -38,6 +38,10 @@ public class DialogeHandler : MonoBehaviour
 
     public void StartDialog(string[] dialog, UnityEvent methodsToExecuteAfterDialogeEnd = null)
     {
+        if(dialog == null)
+        {
+            Debug.LogError("The dialog array is empty");
+        }
         player.GetComponent<PlayerMovementController>().FreezePlayer();
         dialogeBox.enabled = true;
         dialogeText.enabled = true;

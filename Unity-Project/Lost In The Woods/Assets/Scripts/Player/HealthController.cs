@@ -63,20 +63,32 @@ public class HealthController : MonoBehaviour
         }
     }
 
-    private void KillPlayer()
+    public void KillPlayer(string deathText = "You are dead! Game Over!", string sceneToLoadAfterDeath = null, bool fallDown = false)
     {
+        if(sceneToLoadAfterDeath != null)
+        {
+            this.sceneToLoadAfterDeath = sceneToLoadAfterDeath;
+        }
         if(killPlayerOnZeroHealth)
         {
+            playerHealthGUIAnimator.SetInteger("Damage", 0);
             deathSound.Play();
             ekgFlatSound.Play();
 
             player.GetComponent<PlayerMovementController>().FreezePlayer();
 
-            deathText.enabled = true;
-            deathText.alpha = 1;
-            deathText.text = "You are dead! Game Over!";
+            this.deathText.enabled = true;
+            this.deathText.alpha = 1;
+            this.deathText.text = deathText;
 
-            new Task(RotatePlayerBackwards());
+            if (!fallDown)
+            {
+                new Task(RotatePlayerBackwards());
+            }
+            else
+            {
+                new Task(FallDown());
+            }
         }
     }
 
@@ -98,5 +110,20 @@ public class HealthController : MonoBehaviour
     private void HealthController_Finished(bool manual)
     {
         SceneManager.LoadScene(sceneToLoadAfterDeath);
+    }
+
+    private IEnumerator FallDown()
+    {
+        float yPos = player.transform.position.y;
+        float newyPos = player.transform.position.y - 1.2f;
+
+        float downSpeed = 0.1f;
+        do
+        {
+            this.transform.position += Vector3.down * Time.deltaTime * downSpeed;
+            yield return new WaitForEndOfFrame();
+        } while (this.transform.position.y > newyPos);
+
+        Task.WaitForSecondsTask(5).Finished += HealthController_Finished;
     }
 }
