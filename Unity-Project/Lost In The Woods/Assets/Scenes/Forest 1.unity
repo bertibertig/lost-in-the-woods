@@ -1292,7 +1292,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3058346755455478715, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.02
+      value: 73.99
       objectReference: {fileID: 0}
     - target: {fileID: 3058346755455478715, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1300,7 +1300,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3058346755455478715, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 16.19
+      value: 72.03
       objectReference: {fileID: 0}
     - target: {fileID: 3058346755455478715, guid: e8e17e0d93e007c4aa389e9d374fe8ba, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1378,6 +1378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daa61a1ff9bdeba49a03bfbd873f2710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  door: {fileID: 168223237}
 --- !u!1 &164854912
 GameObject:
   m_ObjectHideFlags: 0
@@ -7210,6 +7211,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 1288066980}
+  dialoge:
+  - <color=#933D2A>Detective:</color> The door is locked. I need to look arround.
+    Maybe there is something in the forest.
 --- !u!1 &201162293
 GameObject:
   m_ObjectHideFlags: 0

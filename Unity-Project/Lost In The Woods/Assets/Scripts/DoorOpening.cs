@@ -6,14 +6,29 @@ public class DoorOpening : MonoBehaviour
 {
     [SerializeField]
     private GameObject door;
-    [HideInInspector]
-    public static bool closed = true;
+    [SerializeField]
+    private string[] dialoge;
+
+    private bool closed = true;
+    private DialogeHandler dialogeHandler;
+
+    public bool Closed
+    {
+        get { return closed; }
+        set { closed = value; }
+    }
+
+    private void Start()
+    {
+        dialogeHandler = GameObject.FindGameObjectWithTag("DialogSystem").GetComponent<DialogeHandler>();
+    }
+
 
     public void OpenDoor()
     {
-        if (closed)
+        if (Closed)
         {
-            // add text to display
+            dialogeHandler.StartDialog(dialoge);
             GameObject.Find("ChangeVisability").GetComponent<Visibilty>().EnableVisibility();
         }
         else

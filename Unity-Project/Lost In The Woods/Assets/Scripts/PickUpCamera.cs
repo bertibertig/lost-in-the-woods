@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class PickUpCamera : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject door;
+
     public void PickUp()
     {
         Destroy(this.gameObject);
-        DoorOpening.closed = false;
+        door.GetComponent<DoorOpening>().Closed = false;
     }
 }
