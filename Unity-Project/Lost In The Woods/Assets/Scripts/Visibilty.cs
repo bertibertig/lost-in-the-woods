@@ -15,7 +15,7 @@ public class Visibilty : MonoBehaviour
         }
     }
 
-    public void enableVisibility()
+    public void EnableVisibility()
     {
         foreach (GameObject obj in changeVisibility)
         {

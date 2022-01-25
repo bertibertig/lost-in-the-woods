@@ -18,6 +18,10 @@ public class PlayerMovementController : MonoBehaviour
 
     private CharacterController cc;
 
+    [SerializeField]
+    private AudioClip outOfBreath;
+    private AudioSource audioSrc;
+
     public bool DisableMovement { get; set; }
 
     // Start is called before the first frame update
@@ -27,6 +31,7 @@ public class PlayerMovementController : MonoBehaviour
         currSpeed = normalSpeed;
         DisableMovement = false;
         currStamina = maxStamina;
+        audioSrc = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -47,6 +52,8 @@ public class PlayerMovementController : MonoBehaviour
                 }
                 else
                 {
+                    audioSrc.clip = outOfBreath;
+                    audioSrc.PlayDelayed(0);
                     staminaRegenTime += Time.deltaTime;
                 }
             }
