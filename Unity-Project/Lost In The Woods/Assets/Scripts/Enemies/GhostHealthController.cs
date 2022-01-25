@@ -30,8 +30,9 @@ public class GhostHealthController : MonoBehaviour
         print("Damage: " + damageAmount + "\nEnemyHP: " + hp);
         if(hp <= 0)
         {
-            Destroy(gameObject);
+            GetComponent<FloatToPlayer>().FollowPlayerTask.Stop();
             Instantiate(objectToSpawn, transform.position, transform.rotation);
+            Destroy(gameObject);
         }
     }
 }

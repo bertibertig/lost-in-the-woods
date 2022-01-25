@@ -1377,8 +1377,7 @@ MonoBehaviour:
   axis: 0
   minVert: -60
   maxVert: 70
-  sensitivityHor: 4
-  sensitivityVer: 4
+  sensitivity: 17
 --- !u!114 &6743983564321648654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3258,7 +3257,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  chargeUIText: {fileID: 0}
   cooldown: 3
   minDistance: 2
   charge: 0

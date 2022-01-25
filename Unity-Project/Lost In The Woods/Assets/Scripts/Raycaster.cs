@@ -7,7 +7,6 @@ public class Raycaster : MonoBehaviour
 {
     [Range(0.1f, 1)]
     public float speed = 1;
-    public TextMeshProUGUI chargeUIText;
     public int cooldown = 3;
     [SerializeField]
     private float minDistance = 3.0f;
@@ -15,21 +14,28 @@ public class Raycaster : MonoBehaviour
     private Camera camera;
     [SerializeField, ReadOnly]
     private int charge;
-    private bool lookingAtGhost;
     private bool loadChargeStarted;
     private bool raycasterDisabled;
 
     private LevelExit levelExit = null;
     private Interactable interactable = null;
+    private GUIInputHandler guiInputHandler;
+    private Task loadCharge;
+
+    //camera UI static values
+    private static int MAX_CHARGE_PER_SHOT = 8;
+    private static float INITIAL_ALPHA_VALUE_OF_SPIRIT_BALLS = 0.5f;
+    private static float FINAL_ALPHA_VALUE_OF_SPIRIT_BALLS = 1;
 
     // Start is called before the first frame update
     void Start()
     {
         camera = GetComponent<Camera>();
+        guiInputHandler = GameObject.FindGameObjectWithTag("GUI").GetComponent<GUIInputHandler>();
         charge = 0;
-        lookingAtGhost = false;
         loadChargeStarted = false;
         raycasterDisabled = false;
+        loadCharge = null;
     }
 
     // Update is called once per frame
@@ -46,13 +52,12 @@ public class Raycaster : MonoBehaviour
                 GameObject hitTarget = hit.transform.gameObject;
                 float distance = Vector3.Distance(gameObject.transform.position, hitTarget.transform.position);
 
-                if (hitTarget.CompareTag("GhostEnemy"))
+                if (hitTarget.CompareTag("GhostEnemy") && guiInputHandler.CameraDisplayed)
                 {
-                    lookingAtGhost = true;
                     if (!loadChargeStarted)
                     {
                         loadChargeStarted = true;
-                        StartCoroutine(LoadCharge());
+                        loadCharge = new Task(LoadCharge());
                     }
                 }
                 else if (hitTarget.CompareTag("LevelExit") && distance <= minDistance)
@@ -73,12 +78,12 @@ public class Raycaster : MonoBehaviour
                 }
                 else
                 {
-                    lookingAtGhost = false;
                     loadChargeStarted = false;
-                    StopCoroutine(LoadCharge());
+                    if (loadCharge != null && loadCharge.Running)
+                    {
+                        loadCharge.Stop();
+                    }
                     charge = 0;
-                    if (chargeUIText != null)
-                        chargeUIText.text = charge.ToString();
 
                     if (levelExit != null && levelExit.PlayerLookingAtObject)
                     {
@@ -92,14 +97,15 @@ public class Raycaster : MonoBehaviour
 
                 if (Input.GetMouseButtonDown(0))
                 {
-                    if (hitTarget.CompareTag("GhostEnemy"))
+                    if (hitTarget.CompareTag("GhostEnemy") && guiInputHandler.CameraDisplayed)
                     {
-                        GhostHealthController healthController = hitTarget.GetComponent<GhostHealthController>();
-                        print("Ghost HP: " + healthController.Hp);
-                        healthController.DamageGhost(charge);
-                        lookingAtGhost = false;
-                        StopCoroutine(LoadCharge());
+                        GhostHealthController ghostHealthController = hitTarget.GetComponent<GhostHealthController>();
+                        print("Ghost HP: " + ghostHealthController.Hp);
+                        ghostHealthController.DamageGhost(charge);
+                        loadCharge.Stop();
                         charge = 0;
+                        ResetGhostBalls();
+                        loadCharge = new Task(LoadCharge());
                     }
                     if (hitTarget.CompareTag("LevelExit") && levelExit != null)
                     {
@@ -110,34 +116,31 @@ public class Raycaster : MonoBehaviour
         }
     }
 
+    private void ResetGhostBalls()
+    {
+        foreach(var ball in guiInputHandler.GhostBalls)
+        {
+            ball.color = new Color(Color.white.r, Color.white.g, Color.white.b, INITIAL_ALPHA_VALUE_OF_SPIRIT_BALLS);
+        }
+    }
+
     private IEnumerator LoadCharge()
     {
-        while (lookingAtGhost && charge <= 100)
+        while (charge < MAX_CHARGE_PER_SHOT)
         {
             yield return new WaitForSeconds(speed);
+            guiInputHandler.GhostBalls[charge].color = new Color(Color.white.r, Color.white.g, Color.white.b, FINAL_ALPHA_VALUE_OF_SPIRIT_BALLS);
             charge++;
-            if (chargeUIText != null)
-            {
-                chargeUIText.text = charge.ToString();
-            }
         }
     }
 
     public void DisableRaycaster()
     {
         raycasterDisabled = true;
-        if (chargeUIText != null)
-        {
-            chargeUIText.enabled = false;
-        }
     }
 
     public void EnableRaycaster()
     {
         raycasterDisabled = false;
-        if (chargeUIText != null)
-        {
-            chargeUIText.enabled = true;
-        }
     }
 }

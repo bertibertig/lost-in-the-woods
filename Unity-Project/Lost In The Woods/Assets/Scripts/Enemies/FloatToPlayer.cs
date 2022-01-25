@@ -13,6 +13,8 @@ public class FloatToPlayer : MonoBehaviour
     [SerializeField]
     private bool seenPlayer;
     private GameObject player;
+
+    public Task FollowPlayerTask { get; private set; }
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +32,7 @@ public class FloatToPlayer : MonoBehaviour
             yield return new WaitForEndOfFrame();
         } while (distanceToPlayer > followDistance);
         seenPlayer = true;
-        new Task(FollowPlayer());
+        FollowPlayerTask = new Task(FollowPlayer());
     }
 
     private IEnumerator FollowPlayer()

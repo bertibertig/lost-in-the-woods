@@ -8,6 +8,8 @@ public class VariableMindController : MonoBehaviour
 
     public float MouseSpeed { get; set; }
 
+    public bool CameraPickedUp { get; set; }
+
     private void Start()
     {
         DontDestroyOnLoad(this);
@@ -17,5 +19,8 @@ public class VariableMindController : MonoBehaviour
         {
             MouseSpeed = player.GetComponentInChildren<MouseLook>().Sensitivity;
         }
+
+        CameraPickedUp = false;
+        MouseSpeed = 5;
     }
 }
