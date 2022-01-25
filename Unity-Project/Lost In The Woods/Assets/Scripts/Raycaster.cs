@@ -82,6 +82,7 @@ public class Raycaster : MonoBehaviour
                     if (loadCharge != null && loadCharge.Running)
                     {
                         loadCharge.Stop();
+                        ResetGhostBalls();
                     }
                     charge = 0;
 
@@ -113,6 +114,18 @@ public class Raycaster : MonoBehaviour
                     }
                 }
             }
+            else
+            {
+                //Reset Ghost variables
+                loadChargeStarted = false;
+                if (loadCharge != null && loadCharge.Running)
+                {
+                    loadCharge.Stop();
+                    ResetGhostBalls();
+                }
+                charge = 0;
+
+            }
         }
     }
 
@@ -129,8 +142,15 @@ public class Raycaster : MonoBehaviour
         while (charge < MAX_CHARGE_PER_SHOT)
         {
             yield return new WaitForSeconds(speed);
-            guiInputHandler.GhostBalls[charge].color = new Color(Color.white.r, Color.white.g, Color.white.b, FINAL_ALPHA_VALUE_OF_SPIRIT_BALLS);
-            charge++;
+            if (guiInputHandler.CameraDisplayed && loadChargeStarted)
+            {
+                guiInputHandler.GhostBalls[charge].color = new Color(Color.white.r, Color.white.g, Color.white.b, FINAL_ALPHA_VALUE_OF_SPIRIT_BALLS);
+                charge++;
+            }
+            else
+            {
+                break;
+            }
         }
     }
 
