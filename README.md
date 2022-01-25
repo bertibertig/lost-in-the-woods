@@ -54,7 +54,7 @@ Shed: https://assetstore.unity.com/packages/3d/environments/urban/the-shed-10303
 Skybox: https://assetstore.unity.com/packages/2d/textures-materials/sky/fantasy-skybox-free-18353
 Sofa: https://jforceg.itch.io/ps1-inspired-furniture-and-others
 Camera: https://www.cgtrader.com/free-3d-models/electronics/video/low-poly-vintage-camera
-Picture Frames: https://assetstore.unity.com/packages/3d/props/interior/picture-frames-with-photos-106907
+Revolver: https://assetstore.unity.com/packages/3d/props/guns/guns-pack-low-poly-guns-collection-192553
 Girl: https://www.turbosquid.com/3d-models/free-copyleft-annlee-3d-model/444112
 
 ### Filters
