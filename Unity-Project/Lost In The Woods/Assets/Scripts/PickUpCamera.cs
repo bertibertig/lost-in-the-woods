@@ -44,7 +44,7 @@ public class PickUpCamera : MonoBehaviour
     public void PickUp()
     {
         dialogeHandler.StartDialog(dialoge);
-        dialogeHandler.FinishedDialog += DialogeHandler_FinishedDialog;
+        //dialogeHandler.FinishedDialog += DialogeHandler_FinishedDialog;
 
         door.GetComponent<DoorOpening>().Closed = false;
         GetComponentInChildren<Interactable>().DisableInteraction();

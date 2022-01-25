@@ -39,7 +39,13 @@ Unity Task Manager Copyright chomp
 https://forum.unity.com/threads/a-more-flexible-coroutine-interface.94220/ 
 https://raw.github.com/krockot/Unity-TaskManager/master/TaskManager.cs 
 
-Pictures
+Textures
 Picture1: https://www.pexels.com/photo/forest-trail-428396/
 Picture2: https://www.pexels.com/photo/grayscale-photography-of-hallway-1460279/v
+Paper-Texture: https://www.freepik.com/free-photo/vintage-grunge-paper-background_5405364.htm
+
+Fonts:
+Kailey Latief: https://www.fontspace.com/kailey-latief-font-f45440
+Retro Font: https://www.1001fonts.com/retro+pixel+horror-fonts.html
+
 
