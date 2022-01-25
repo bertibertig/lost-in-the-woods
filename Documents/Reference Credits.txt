@@ -11,6 +11,7 @@ Skybox: https://assetstore.unity.com/packages/2d/textures-materials/sky/fantasy-
 Sofa: https://jforceg.itch.io/ps1-inspired-furniture-and-others
 Camera: https://www.cgtrader.com/free-3d-models/electronics/video/low-poly-vintage-camera
 Picture Frames: https://assetstore.unity.com/packages/3d/props/interior/picture-frames-with-photos-106907
+Girl: https://www.turbosquid.com/3d-models/free-copyleft-annlee-3d-model/444112
 
 Filters
 PSXEffects: https://assetstore.unity.com/packages/vfx/shaders/psxeffects-132368 

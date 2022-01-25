@@ -15,12 +15,18 @@ public class PickUpCamera : MonoBehaviour
     [SerializeField]
     private float displayForSeconds = 5;
 
+    [SerializeField]
+    private string[] dialoge;
+    private DialogeHandler dialogeHandler;
+
     private FadeText fadeText;
     private GUIInputHandler gUIInputHandler;
     private VariableMindController variableMindController;
 
     private void Start()
     {
+        dialogeHandler = GameObject.FindGameObjectWithTag("DialogSystem").GetComponent<DialogeHandler>();
+
         if (notificationText != null)
         {
             fadeText = notificationText.GetComponent<FadeText>();
@@ -37,6 +43,9 @@ public class PickUpCamera : MonoBehaviour
 
     public void PickUp()
     {
+        dialogeHandler.StartDialog(dialoge);
+        dialogeHandler.FinishedDialog += DialogeHandler_FinishedDialog;
+
         door.GetComponent<DoorOpening>().Closed = false;
         GetComponentInChildren<Interactable>().DisableInteraction();
         GetComponentInChildren<MeshRenderer>().enabled = false;
@@ -48,7 +57,12 @@ public class PickUpCamera : MonoBehaviour
             variableMindController.CameraPickedUp = true;
         }
 
-        fadeText.FadeIn(fadeInOutSeconds, cameraUsageText).Finished += FadeOutTask_Finished; ;
+        fadeText.FadeIn(fadeInOutSeconds, cameraUsageText).Finished += FadeOutTask_Finished;
+    }
+
+    private void DialogeHandler_FinishedDialog()
+    {
+        throw new System.NotImplementedException();
     }
 
     //Wait for seconds and let the player read the text
