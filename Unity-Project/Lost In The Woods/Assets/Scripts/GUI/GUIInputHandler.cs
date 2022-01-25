@@ -18,8 +18,6 @@ public class GUIInputHandler : MonoBehaviour
     [SerializeField]
     private Image[] ghostBalls;
     
-
-
     private bool optionsOpened = false;
     bool interactionTextActive;
     bool cameraOpened;
@@ -39,10 +37,6 @@ public class GUIInputHandler : MonoBehaviour
 
     void Start()
     {
-        if (optionsMenu != null)
-        {
-            optionsMenu.SetActive(false);
-        }
         interactionTextActive = interactionText.activeSelf;
         cameraOpened = cameraUI.activeSelf;
         if (GameObject.FindGameObjectWithTag("VariableMind") != null)
