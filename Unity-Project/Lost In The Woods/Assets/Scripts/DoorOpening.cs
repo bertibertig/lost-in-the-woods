@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class DoorOpening : MonoBehaviour
 {
-    private void Start()
-    {
-        openDoor();
-    }
-    public void openDoor()
+    public GameObject door;
+   public void openDoor()
     {
         this.transform.Rotate(0, 90, 0);
+        door.GetComponent<Interactable>().DisableInteraction();
     }
 }

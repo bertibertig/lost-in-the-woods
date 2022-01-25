@@ -43,7 +43,7 @@ public class OfficeBeginningCutscene : MonoBehaviour
 
     public void StartCutscene()
     {  
-        interactable.DiableInteraction();
+        interactable.DisableInteraction();
         var waitTesk = new Task(Task.WaitForSeconds(1));
         waitTesk.Finished += RingTelephone;
     }
@@ -68,7 +68,7 @@ public class OfficeBeginningCutscene : MonoBehaviour
         
         if(sender != null && sender.CompareTag("Interactable"))
         {
-            sender.GetComponent<Interactable>().DiableInteraction();
+            sender.GetComponent<Interactable>().DisableInteraction();
             sender.GetComponent<Interactable>().LookingAway();
             StartTelephoneConversation();
         }

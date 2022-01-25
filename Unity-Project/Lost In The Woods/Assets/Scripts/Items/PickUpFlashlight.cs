@@ -39,7 +39,7 @@ public class PickUpFlashlight : MonoBehaviour
         {
             interactedOnce = true;
 
-            GetComponent<Interactable>().DiableInteraction();
+            GetComponent<Interactable>().DisableInteraction();
             GetComponent<MeshRenderer>().enabled = false;
             levelExit.EnableExit();
 
