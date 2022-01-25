@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class LookTowardsPlayer : MonoBehaviour
 {
+    private void Start()
+    {
+        gameObject.SetActive(false);
+    }
     public void LookAtPlayer(float additionalX = 0, float additionalY = 0, float additionalZ = 0)
     {
         transform.LookAt(GameObject.FindGameObjectWithTag("Player").transform);
